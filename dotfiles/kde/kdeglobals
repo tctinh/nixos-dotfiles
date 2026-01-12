@@ -105,18 +105,20 @@ ForegroundPositive=166,218,149
 ForegroundVisited=165,173,203
 
 [General]
-ColorSchemeHash=55e95b370c48ce22e109579f866348bd870709d2
+ColorScheme=CatppuccinMacchiato
+ColorSchemeHash=79296561e8832ef612d7c1138272b1e03e6ba66d
 
 [Icons]
 Theme=Papirus-Dark
 
 [KDE]
-LookAndFeelPackage=org.kde.breezedark.desktop
+LookAndFeelPackage=Nordic
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 Show Full Path=false
 Show Inline Previews=true

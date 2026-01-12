@@ -32,10 +32,18 @@ in
     # KDE Theming
     kdePackages.qtstyleplugin-kvantum
     catppuccin-kvantum
+    catppuccin-kde        # Catppuccin color scheme for KDE
     catppuccin-cursors
     papirus-icon-theme
     bibata-cursors
+    nordic                # Nordic theme
   ];
+
+  #############################################################################
+  # Wallpapers
+  #############################################################################
+  home.file.".local/share/wallpapers/Nordic-mountain-wallpaper.jpg".source = ../dotfiles/wallpapers/Nordic-mountain-wallpaper.jpg;
+  home.file.".local/share/wallpapers/nordic-wallpaper.jpg".source = ../dotfiles/wallpapers/nordic-wallpaper.jpg;
 
   #############################################################################
   # Programs
@@ -84,13 +92,13 @@ in
     # Workspace settings
     workspace = {
       clickItemTo = "select";  # Single click to select, double-click to open
-      lookAndFeel = "org.kde.breezedark.desktop";
+      lookAndFeel = "Nordic";  # Nordic theme
       cursor = {
         theme = "Bibata-Modern-Ice";
         size = 24;
       };
       iconTheme = "Papirus-Dark";
-      # colorScheme = "CatppuccinMacchiatoLavender";  # Uncomment if you have Catppuccin color scheme installed
+      colorScheme = "CatppuccinMacchiato";  # Catppuccin Macchiato color scheme
     };
 
     # Fonts
@@ -276,8 +284,18 @@ in
           ElectricBorderMaximize = false;
           ElectricBorderTiling = false;
         };
-        Plugins.slideEnabled = false;
+        Plugins = {
+          slideEnabled = false;
+          kzonesEnabled = true;
+          rememberwindowpositionsEnabled = true;
+        };
         "Effect-overview".BorderActivate = 9;  # Overview on screen edge (9 = no edge)
+        "org.kde.kdecoration2" = {
+          BorderSize = "Tiny";
+          BorderSizeAuto = false;
+          library = "org.kde.breeze";
+          theme = "Breeze";
+        };
       };
 
       # Baloo file indexer
