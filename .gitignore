@@ -1,0 +1,42 @@
+# Nix build artifacts
+result
+result-*
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets - NEVER commit these
+*.secret
+*.key
+secrets/
+.ssh/
+
+# Backup files from home-manager
+*.backup
+*.bak
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Lock files are committed (flake.lock is important)
+# But local nix profiles are not
+.nix-profile
+.nix-defexpr
+
+# Credentials that might be in dotfiles
+**/credentials*
+**/token*
+**/*password*
+
+# Node modules if any
+node_modules/
