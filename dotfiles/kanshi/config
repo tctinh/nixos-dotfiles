@@ -1,0 +1,8 @@
+profile workstation {
+	output eDP-2 position 1920,1080 mode 2560x1600@120Hz scale 2.0
+	output HDMI-A-1 position 1280,0 mode 2560x1080@143.945Hz
+}
+
+profile single {
+	output eDP-2 mode 2560x1600@60Hz scale 2.0
+}

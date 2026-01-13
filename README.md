@@ -2,76 +2,79 @@
 
 Personal NixOS configuration with Home Manager and Plasma Manager for a fully declarative desktop setup.
 
-## 📁 Repository Structure
+**See [QUICKSTART.md](QUICKSTART.md) for setup instructions.**
+
+## Repository Structure
 
 ```
 nixos-dotfiles/
-├── flake.nix                 # Main flake - entry point
-├── flake.lock                # Locked dependencies
+├── flake.nix                     # Main flake - entry point
+├── flake.lock                    # Locked dependencies
+├── QUICKSTART.md                 # Setup guide
 ├── hosts/
 │   └── nixos/
-│       ├── configuration.nix # System configuration
+│       ├── configuration.nix     # Host-specific config (slim)
 │       └── hardware-configuration.nix
 ├── home/
-│   └── tctinh.nix            # Home Manager config with plasma-manager
+│   └── tctinh.nix                # User entry point (imports modules)
 ├── modules/
-│   ├── nixos/                # Reusable NixOS modules
-│   └── home-manager/         # Reusable Home Manager modules
-└── dotfiles/                 # Reference copies of dotfiles
-    ├── kde/                  # KDE config files (for reference)
-    ├── fcitx5/               # Vietnamese input method
-    └── fish/                 # Fish shell config
+│   ├── nixos/                    # System modules
+│   │   ├── default.nix           # Aggregator
+│   │   ├── desktop.nix           # KDE Plasma + SDDM
+│   │   ├── audio.nix             # PipeWire
+│   │   ├── nvidia.nix            # NVIDIA Optimus/Prime
+│   │   ├── networking.nix        # NetworkManager + hosts
+│   │   ├── fcitx5.nix            # Vietnamese input
+│   │   ├── shell.nix             # Bash + oh-my-bash
+│   │   ├── virtualization.nix    # Docker + Waydroid
+│   │   ├── gaming.nix            # Steam + Lutris
+│   │   └── packages.nix          # System packages
+│   └── home-manager/             # User modules
+│       ├── default.nix           # Aggregator
+│       ├── plasma.nix            # KDE workspace config
+│       ├── packages.nix          # User apps
+│       └── files.nix             # Wallpapers + dotfiles
+└── dotfiles/                     # Reference configs
+    ├── kde/                      # KDE config files
+    └── fcitx5/                   # Vietnamese input method
 ```
 
-## 🚀 Quick Start
-
-### Fresh Install
-
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/tctinh/nixos-dotfiles.git ~/nixos-dotfiles
-   cd ~/nixos-dotfiles
-   ```
-
-2. Apply NixOS configuration:
-   ```bash
-   sudo nixos-rebuild switch --flake .#nixos
-   ```
-
-### Updating
+## Quick Commands
 
 ```bash
-# Update all flake inputs
+# Apply configuration
+sudo nixos-rebuild switch --flake .#nixos
+
+# Test build
+sudo nixos-rebuild dry-build --flake .#nixos
+
+# Update inputs
 nix flake update
 
-# Rebuild system
-sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos
-
-# Or use the alias
-update
+# Development shell
+nix develop
 ```
 
-## 🎨 Features
+## Features
 
 ### System
-- **NixOS 25.11** with flakes
+- **NixOS 24.11** with flakes
 - **KDE Plasma 6** desktop environment
 - **NVIDIA Optimus** (hybrid AMD + NVIDIA)
 - **Docker** (rootless)
 - **Waydroid** for Android apps
 - **Steam** and **Lutris** for gaming
 
-### Desktop (Declarative via plasma-manager)
-- **Theme:** Catppuccin Macchiato (Dark)
+### Desktop (via plasma-manager)
+- **Theme:** Nordic / Catppuccin Macchiato
 - **Icons:** Papirus-Dark
 - **Cursor:** Bibata-Modern-Ice
-- **Font:** Noto Sans + FantasqueSansM Nerd Font (terminal)
-- **Shortcuts:** Meta+1/2/3 for desktops, Meta+Return for terminal
+- **Font:** Noto Sans + FantasqueSansM Nerd Font
 
 ### Input Method
 - **Fcitx5 + Bamboo** for Vietnamese typing
 
-## ⌨️ Key Bindings
+## Key Bindings
 
 | Shortcut | Action |
 |----------|--------|
@@ -80,60 +83,40 @@ update
 | `Meta+E` | Launch Dolphin |
 | `Meta+D` | Show Desktop |
 | `Meta+W` | Overview |
-| `Meta+G` | Grid View |
 | `Meta+L` | Lock Screen |
 
-## 📦 Included Packages
+## Packages
 
-### System-wide
-- Development: `git`, `gh`, `nodejs`, `vim`, `vscode`
-- Browsers: `firefox`, `microsoft-edge`
-- Gaming: `steam`, `lutris`, `discord`
-- Productivity: `libreoffice`, `teams-for-linux`
-- Utilities: `fastfetch`, `htop`, `jq`, `wget`
+### System-wide (`modules/nixos/packages.nix`)
+- Core: `git`, `gh`, `nodejs`, `vim`, `wget`, `jq`
+- Utilities: `fastfetch`, `htop`, `lshw`
+- Office: `libreoffice`
 
-### User (via Home Manager)
-- `prime-run` script for NVIDIA offloading
-- KDE theming packages (Kvantum, Catppuccin, etc.)
+### User (`modules/home-manager/packages.nix`)
+- Editors: `zed-editor`
+- Browsers: `microsoft-edge`
+- Communication: `teams-for-linux`, `discord`
 
-## 🔧 Customization
+### Gaming (`modules/nixos/gaming.nix`)
+- `steam`, `lutris`
 
-### Adding a new host
+## Customization
 
-1. Create `hosts/<hostname>/configuration.nix`
-2. Add to `flake.nix`:
-   ```nix
-   nixosConfigurations.<hostname> = nixpkgs.lib.nixosSystem { ... };
-   ```
+| Task | File |
+|------|------|
+| Add system packages | `modules/nixos/packages.nix` |
+| Add user apps | `modules/home-manager/packages.nix` |
+| Change KDE settings | `modules/home-manager/plasma.nix` |
+| Add shell aliases | `modules/nixos/shell.nix` |
+| Add new host | See QUICKSTART.md |
 
-### Modifying KDE settings
-
-Edit `home/tctinh.nix` under `programs.plasma`. Common sections:
-- `workspace` - Theme, icons, cursor
-- `panels` - Panel layout and widgets
-- `shortcuts` - Keyboard shortcuts
-- `kwin` - Window manager settings
-
-### Converting existing KDE settings to Nix
-
-Use the `rc2nix` tool:
-```bash
-nix run github:nix-community/plasma-manager
-```
-
-## 📝 Notes
-
-- The `dotfiles/kde/` directory contains reference copies of KDE configs
-- These are NOT applied automatically - they're for reference when converting to plasma-manager
-- Sensitive files (SSH keys, credentials) are NOT tracked
-
-## 🔗 References
+## References
 
 - [NixOS Manual](https://nixos.org/manual/nixos/stable/)
 - [Home Manager Manual](https://nix-community.github.io/home-manager/)
 - [Plasma Manager](https://github.com/nix-community/plasma-manager)
-- [Catppuccin Theme](https://github.com/catppuccin/catppuccin)
+- [NixOS Modules Wiki](https://nixos.wiki/wiki/NixOS_modules)
 
-## 📄 License
+## License
 
 MIT

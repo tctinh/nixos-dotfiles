@@ -1,0 +1,36 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### Minimal - Long ### //
+
+{
+"include": "~/.config/waybar-sway/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 6,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+	"custom/menu",
+	"sway/workspaces",
+	"custom/swaync",
+	"mpris",
+	],
+"modules-center": [
+	"sway/window",
+	],
+"modules-right": [
+	"tray",
+	"group/motherboard",
+	"group/laptop",
+	"clock",
+	"custom/power",
+	],
+
+}
