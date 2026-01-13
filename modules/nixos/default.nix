@@ -9,7 +9,6 @@
     ./virtualization.nix
     ./gaming.nix
     ./packages.nix
-    ./sway.nix
     ./fprintd.nix
     ./fonts.nix
     ./power.nix

@@ -22,6 +22,9 @@ in
       l = "ls -CF";
       update = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
       dots = "cd ~/nixos-dotfiles";
+      # VSCode aliases
+      code = "code-insiders";
+      code-stable = "/run/current-system/sw/bin/code";
     };
     interactiveShellInit = ''
       export OSH=${oh-my-bash-src}

@@ -12,6 +12,7 @@
     fastfetch
     htop
     lshw
+    lm_sensors
 
     # Btrfs tools
     btrfs-progs

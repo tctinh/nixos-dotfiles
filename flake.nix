@@ -2,14 +2,11 @@
   description = "NixOS + Home Manager configuration with plasma-manager for KDE";
 
   inputs = {
-    # Stable NixOS channel
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-
-    # Unstable channel for bleeding-edge packages (gemini-cli, etc.)
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # Use unstable as the base for entire system (latest Plasma, etc.)
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager";  # master follows unstable
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -19,33 +16,79 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    # VS Code Insiders - tracks latest nightly releases
-    vscode-insiders = {
-      url = "github:auguwu/vscode-insiders-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-
     # opencode uses its own nixpkgs (unstable) to avoid compatibility issues
     opencode = {
       url = "github:anomalyco/opencode?ref=dev";
       # Don't follow nixpkgs - let it use its own
     };
+
+    # VS Code Insiders - auto-updated hashes via GitHub Actions
+    vscode-insiders = {
+      url = "github:auguwu/vscode-insiders-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, vscode-insiders, opencode, ... }:
+  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, ... }:
     let
       system = "x86_64-linux";
+
       pkgs = import nixpkgs { 
         inherit system;
         config.allowUnfree = true;
         overlays = [ (import vscode-insiders) ];
       };
 
-      # Unstable pkgs for bleeding-edge packages
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
+      # Wrap vscode-insiders with FHS for extension support
+      vscode-insiders-fhs = pkgs.buildFHSEnv {
+        name = "code-insiders";
+        targetPkgs = p: [
+          pkgs.vscode-insiders
+          # Required for extensions with native binaries
+          p.stdenv.cc.cc.lib
+          p.zlib
+          p.openssl
+          p.curl
+          p.libsecret
+          p.libkrb5
+          p.icu
+          # Network/auth for syncing
+          p.glib
+          p.nss
+          p.nspr
+          p.atk
+          p.cups
+          p.dbus
+          p.expat
+          p.libdrm
+          p.libxkbcommon
+          p.pango
+          p.cairo
+          p.mesa
+          p.alsa-lib
+          # Additional deps from wiki
+          p.krb5
+          p.libsoup_3
+          p.webkitgtk_4_1
+        ];
+        runScript = "code-insiders";
+        profile = ''
+          export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
+        '';
+      };
+
+      # Desktop entry for VS Code Insiders
+      vscode-insiders-desktop = pkgs.makeDesktopItem {
+        name = "code-insiders";
+        desktopName = "Visual Studio Code - Insiders";
+        comment = "Code Editing. Redefined.";
+        exec = "${vscode-insiders-fhs}/bin/code-insiders %F";
+        icon = "vscode-insiders";
+        terminal = false;
+        categories = [ "Utility" "TextEditor" "Development" "IDE" ];
+        mimeTypes = [ "text/plain" "inode/directory" ];
+        startupNotify = true;
+        startupWMClass = "Code - Insiders";
       };
 
       # User configuration
@@ -78,17 +121,18 @@
 
           # Extra packages from flake inputs
           ({ lib, pkgs, ... }: {
-            # Apply vscode-insiders overlay
-            nixpkgs.overlays = [ (import vscode-insiders) ];
+            # Enable nix-ld for VSCode extensions with pre-compiled binaries
+            programs.nix-ld.enable = true;
             
             environment.systemPackages = lib.mkAfter [
               # From flake inputs
               opencode.packages.${system}.default
-              pkgs.vscode-insiders
-
-              # Packages from unstable channel
-              pkgs-unstable.vscode.fhs
-              pkgs-unstable.gemini-cli
+              # VS Code FHS - stable version with extension support
+              pkgs.vscode.fhs
+              # VS Code Insiders - bleeding edge with extension support (FHS wrapped)
+              vscode-insiders-fhs
+              vscode-insiders-desktop
+              pkgs.gemini-cli
             ];
           })
         ];
