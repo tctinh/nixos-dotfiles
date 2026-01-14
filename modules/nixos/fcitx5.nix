@@ -1,22 +1,21 @@
 { pkgs, ... }: {
-  # Session environment variables so GTK/Qt/Wayland sessions use fcitx5.
-  # Consolidated from environment.sessionVariables and environment.variables
+  # Wayland: native apps use text-input protocol directly
+  # XMODIFIERS: for XWayland/X11 legacy apps
+  # NIXOS_OZONE_WL: Electron apps use native Wayland
   environment.sessionVariables = {
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
-    SDL_IM_MODULE = "fcitx";
-    IM_CONFIG_PHASE = "1";
+    NIXOS_OZONE_WL = "1";
   };
 
-  # Configure fcitx5 via the NixOS inputMethod option.
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
     fcitx5 = {
-      waylandFrontend = true;
       addons = with pkgs; [
-        fcitx5-gtk
+        # GTK support (GTK2 + GTK3 + GTK4)
+        (fcitx5-gtk.override { withGTK2 = true; })
+        # Input methods
+        fcitx5-mozc
         fcitx5-bamboo
         # KDE/Qt integration
         kdePackages.fcitx5-qt

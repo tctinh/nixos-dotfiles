@@ -166,16 +166,31 @@
           RollOverDesktops = true;
           ElectricBorderMaximize = false;
           ElectricBorderTiling = false;
+          AutoRaise = true;
+          ClickRaise = true;
         };
         Plugins = {
           slideEnabled = lib.mkForce false;
+          fadedesktopEnabled = false;
           kzonesEnabled = true;
           rememberwindowpositionsEnabled = true;
+          shakecursorEnabled = true;
+          synchronizeskipswitcherEnabled = false;
         };
         "Effect-overview".BorderActivate = 9;
+        "Effect-translucency".MoveResize = 93;
+        TabBox.LayoutName = "thumbnail_grid";
+        "Script-desktopchangeosd".PopupHideDelay = 200;
+        "Script-rememberwindowpositions" = {
+          moveActivity = true;
+          moveVirtualDesktop = true;
+          restoreResizedQuickTile = true;
+        };
         "org.kde.kdecoration2" = {
           BorderSize = "Tiny";
           BorderSizeAuto = false;
+          ButtonsOnLeft = "SF";
+          ButtonsOnRight = "IAX";
           library = "org.kde.breeze";
           theme = "Breeze";
         };

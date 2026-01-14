@@ -6,15 +6,8 @@
 
     # Browsers
     microsoft-edge
-    google-chrome
 
     # Communication
-    teams-for-linux
     discord
   ];
-
-  # Session variables
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
 }

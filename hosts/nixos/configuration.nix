@@ -55,7 +55,7 @@
     enable = true;
     config = {
       user.name = "tctinh";
-      user.email = "your-email@example.com"; # TODO: Update this
+      user.email = "tctinh@tma.com.vn";
       init.defaultBranch = "main";
       pull.rebase = false;
       push.autoSetupRemote = true;
@@ -63,7 +63,7 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = false;
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

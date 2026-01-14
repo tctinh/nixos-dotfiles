@@ -14,6 +14,9 @@
     lshw
     lm_sensors
 
+    hunspell
+    vlc
+
     # Btrfs tools
     btrfs-progs
     kdePackages.partitionmanager
@@ -27,6 +30,7 @@
     # System utilities
     lenovo-legion
     noisetorch
+    auto-cpufreq
 
     # Database tools
     mongodb-compass

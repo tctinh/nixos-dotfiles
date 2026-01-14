@@ -1,30 +1,53 @@
 [Desktops]
-Id_1=6328cab0-95f2-4828-97d8-dd978f45fb1d
-Id_2=97bbc6be-7126-4d6e-a630-aea54b2a127c
-Id_3=6c718555-c9b1-4ebe-a755-db007458a981
+Id_1=Desktop_1
+Id_2=Desktop_2
+Id_3=Desktop_3
 Number=3
 Rows=1
 
 [Effect-overview]
 BorderActivate=9
 
+[Effect-translucency]
+MoveResize=93
+
 [Plugins]
+fadedesktopEnabled=false
 krohnkiteEnabled=false
 kzonesEnabled=true
 rememberwindowpositionsEnabled=true
+shakecursorEnabled=true
 slideEnabled=false
+synchronizeskipswitcherEnabled=false
+
+[Script-desktopchangeosd]
+PopupHideDelay=200
 
 [Script-krohnkite]
 directionalKeyDwm=true
 directionalKeyFocus=false
+ignoreClass=krunner,yakuake,spectacle,kded5,xwaylandvideobridge,plasmashell,ksplashqml,org.kde.plasmashell,org.kde.polkit-kde-authentication-agent-1,org.kde.kruler,kruler,kwin_wayland,ksmserver-logout-greeter,Waydroid,waydroid.com.netease.g108na
+ignoreTitle=waydroid
+screenGapBetween=10
+screenGapBottom=10
+screenGapLeft=10
+screenGapRight=10
+screenGapTop=10
 
 [Script-kzones]
-autoSnapAllNew=true
-fadeWindowsWhileMoving=true
 layoutsJson=[\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 25\n            },\n            {\n                "x": 25,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 75,\n                "y": 0,\n                "height": 100,\n                "width": 25\n            }\n        ]\n    },\n    {\n        "name": "DWM",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 75\n            },\n            {\n                "x": 75,\n                "y": 50,\n                "height": 50,\n                "width": 25\n            },\n            {\n                "x": 75,\n                "y": 0,\n                "height": 50,\n                "width": 25\n            }\n        ]\n    },\n    {\n        "name": "Full",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 100\n            }\n        ]\n    }\n]
 showOsdMessages=false
 trackLayoutPerScreen=true
+zoneOverlayIndicatorDisplay=1
 zoneSelectorTriggerDistance=2
+
+[Script-rememberwindowpositions]
+moveActivity=true
+moveVirtualDesktop=true
+restoreResizedQuickTile=true
+
+[TabBox]
+LayoutName=thumbnail_grid
 
 [Tiling]
 padding=4
@@ -53,6 +76,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][6c718555-c9b1-4ebe-a755-db007458a981][81c6dcd6-c9a9-48db-bcf9-fece88015958]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][7c471acf-c8e2-51b0-961a-c92d3eef94c0]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][97bbc6be-7126-4d6e-a630-aea54b2a127c][28e5ecb0-fdf3-4f9a-ae30-6f3e61a0e105]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -65,6 +91,57 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][97bbc6be-7126-4d6e-a630-aea54b2a127c][81c6dcd6-c9a9-48db-bcf9-fece88015958]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][Desktop_1][2c11342f-c720-4439-b5cb-01ab72738375]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_1][8a9d1942-0556-424d-af16-e6a0fa98ccf5]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_1][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_2][2c11342f-c720-4439-b5cb-01ab72738375]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_2][8a9d1942-0556-424d-af16-e6a0fa98ccf5]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_2][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_3][2c11342f-c720-4439-b5cb-01ab72738375]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_3][8a9d1942-0556-424d-af16-e6a0fa98ccf5]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_3][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][a3544e08-6c98-5875-8f11-1db6ff42c10e]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][cf67bb66-549d-5e93-a2e1-bb05ca2d7b7c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][dcfb0350-bb9a-4c04-bda0-634e6d80578b][2c11342f-c720-4439-b5cb-01ab72738375]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][dcfb0350-bb9a-4c04-bda0-634e6d80578b][8a9d1942-0556-424d-af16-e6a0fa98ccf5]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][dcfb0350-bb9a-4c04-bda0-634e6d80578b][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][e66481dd-c4be-486f-9bc0-1b70bdf10726][2c11342f-c720-4439-b5cb-01ab72738375]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][e66481dd-c4be-486f-9bc0-1b70bdf10726][8a9d1942-0556-424d-af16-e6a0fa98ccf5]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][e66481dd-c4be-486f-9bc0-1b70bdf10726][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][f158f965-1634-4485-b485-89ef1ed84462][28e5ecb0-fdf3-4f9a-ae30-6f3e61a0e105]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -75,6 +152,8 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Windows]
+AutoRaise=true
+ClickRaise=true
 ElectricBorderMaximize=false
 ElectricBorderTiling=false
 RollOverDesktops=true
@@ -82,5 +161,7 @@ RollOverDesktops=true
 [org.kde.kdecoration2]
 BorderSize=Tiny
 BorderSizeAuto=false
+ButtonsOnLeft=SF
+ButtonsOnRight=IAX
 library=org.kde.breeze
 theme=Breeze
