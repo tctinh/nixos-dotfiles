@@ -1,6 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-b97267b9-5479-48b7-bc11-487639c372ff=none,none,Switch to activity "Default"
+switch-to-activity-b7536765-bee0-4a7b-9f55-f33998aa9acd=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
@@ -77,41 +77,6 @@ KZones: Switch to next window in current zone=Ctrl+Alt+Up,none,KZones: Switch to
 KZones: Switch to previous window in current zone=Ctrl+Alt+Down,none,KZones: Switch to previous window in current zone
 KZones: Toggle zone overlay=Ctrl+Alt+C,none,KZones: Toggle zone overlay
 Kill Window=Meta+Ctrl+Esc,Meta+Ctrl+Esc,Kill Window
-KrohnkiteBTreeLayout=none,none,Krohnkite: BTree Layout
-KrohnkiteColumnsLayout=none,none,Krohnkite: Columns Layout
-KrohnkiteDecrease=none,none,Krohnkite: Decrease
-KrohnkiteFloatAll=Meta+Shift+F,none,Krohnkite: Toggle Float All
-KrohnkiteFloatingLayout=none,none,Krohnkite: Floating Layout
-KrohnkiteFocusDown=Meta+J,none,Krohnkite: Focus Down
-KrohnkiteFocusLeft=Meta+H,none,Krohnkite: Focus Left
-KrohnkiteFocusNext=none,none,Krohnkite: Focus Next
-KrohnkiteFocusPrev=Meta+\\,,none,Krohnkite: Focus Previous
-KrohnkiteFocusRight=none,none,Krohnkite: Focus Right
-KrohnkiteFocusUp=Meta+K,none,Krohnkite: Focus Up
-KrohnkiteGrowHeight=Meta+Ctrl+J,none,Krohnkite: Grow Height
-KrohnkiteIncrease=Meta+I,none,Krohnkite: Increase
-KrohnkiteMonocleLayout=Meta+M,none,Krohnkite: Monocle Layout
-KrohnkiteNextLayout=Meta+\\\\,none,Krohnkite: Next Layout
-KrohnkitePreviousLayout=Meta+|,none,Krohnkite: Previous Layout
-KrohnkiteQuarterLayout=none,none,Krohnkite: Quarter Layout
-KrohnkiteRotate=none,none,Krohnkite: Rotate
-KrohnkiteRotatePart=none,none,Krohnkite: Rotate Part
-KrohnkiteSetMaster=Meta+Return,none,Krohnkite: Set master
-KrohnkiteShiftDown=Meta+Shift+J,none,Krohnkite: Move Down/Next
-KrohnkiteShiftLeft=Meta+Shift+H,none,Krohnkite: Move Left
-KrohnkiteShiftRight=Meta+Shift+L,none,Krohnkite: Move Right
-KrohnkiteShiftUp=Meta+Shift+K,none,Krohnkite: Move Up/Prev
-KrohnkiteShrinkHeight=Meta+Ctrl+K,none,Krohnkite: Shrink Height
-KrohnkiteShrinkWidth=Meta+Ctrl+H,none,Krohnkite: Shrink Width
-KrohnkiteSpiralLayout=none,none,Krohnkite: Spiral Layout
-KrohnkiteSpreadLayout=none,none,Krohnkite: Spread Layout
-KrohnkiteStackedLayout=none,none,Krohnkite: Stacked Layout
-KrohnkiteStairLayout=none,none,Krohnkite: Stair Layout
-KrohnkiteTileLayout=none,none,Krohnkite: Tile Layout
-KrohnkiteToggleFloat=Meta+F,none,Krohnkite: Toggle Float
-KrohnkiteTreeColumnLayout=none,none,Krohnkite: Three Column Layout
-KrohnkitegrowWidth=Meta+Ctrl+L,none,Krohnkite: Grow Width
-KrohnkitetoggleDock=none,none,Krohnkite: Toggle Dock
 Move Tablet to Next Output=none,none,Move the tablet to the next output
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
@@ -120,7 +85,6 @@ MoveZoomLeft=none,none,Move Zoomed Area to Left
 MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Meta+W,Meta+W,Toggle Overview
-Remember Window Positions: Show Config=Meta+Ctrl+W,none,Remember Window Positions: Show Config
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Peek at Desktop
 Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Switch One Desktop Down
@@ -145,8 +109,8 @@ Switch to Desktop 19=none,,Switch to Desktop 19
 Switch to Desktop 2=Meta+2,Ctrl+F2,Switch to Desktop 2
 Switch to Desktop 20=none,,Switch to Desktop 20
 Switch to Desktop 3=Meta+3,Ctrl+F3,Switch to Desktop 3
-Switch to Desktop 4=Ctrl+F4,Ctrl+F4,Switch to Desktop 4
-Switch to Desktop 5=none,,Switch to Desktop 5
+Switch to Desktop 4=Meta+4,Ctrl+F4,Switch to Desktop 4
+Switch to Desktop 5=Meta+5,,Switch to Desktop 5
 Switch to Desktop 6=none,,Switch to Desktop 6
 Switch to Desktop 7=none,,Switch to Desktop 7
 Switch to Desktop 8=none,,Switch to Desktop 8
@@ -179,7 +143,7 @@ Walk Through Windows of Current Application Alternative=none,none,Walk Through W
 Walk Through Windows of Current Application Alternative (Reverse)=none,none,Walk Through Windows of Current Application Alternative (Reverse)
 Window Above Other Windows=none,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
-Window Close=Meta+C\tAlt+F4,Alt+F4,Close Window
+Window Close=Meta+C\tAlt,Alt+F4,Close Window
 Window Custom Quick Tile Bottom=none,,Custom Quick Tile Window to the Bottom
 Window Custom Quick Tile Left=none,,Custom Quick Tile Window to the Left
 Window Custom Quick Tile Right=none,,Custom Quick Tile Window to the Right
@@ -188,7 +152,7 @@ Window Fullscreen=none,,Make Window Fullscreen
 Window Grow Horizontal=none,,Expand Window Horizontally
 Window Grow Vertical=none,,Expand Window Vertically
 Window Lower=none,,Lower Window
-Window Maximize=Meta+PgUp,Meta+PgUp,Maximize Window
+Window Maximize=Meta+F,Meta+PgUp,Maximize Window
 Window Maximize Horizontal=none,,Maximize Window Horizontally
 Window Maximize Vertical=none,,Maximize Window Vertically
 Window Minimize=Meta+PgDown,Meta+PgDown,Minimize Window
@@ -235,7 +199,7 @@ Window to Desktop 19=none,,Window to Desktop 19
 Window to Desktop 2=Meta+@,,Window to Desktop 2
 Window to Desktop 20=none,,Window to Desktop 20
 Window to Desktop 3=Meta+#,,Window to Desktop 3
-Window to Desktop 4=none,,Window to Desktop 4
+Window to Desktop 4=Meta+$,,Window to Desktop 4
 Window to Desktop 5=none,,Window to Desktop 5
 Window to Desktop 6=none,,Window to Desktop 6
 Window to Desktop 7=none,,Window to Desktop 7
@@ -270,11 +234,6 @@ playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
-[org.chromium.Chromium]
-2B2218D312AA11518121F43E36A6E4D3-autofill=none,none,Autofill the matched code
-2B2218D312AA11518121F43E36A6E4D3-scan-qr=none,none,Scan a QR code
-_k_friendly_name=org.chromium.Chromium
-
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
 Decrease Screen Brightness=Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness
@@ -291,6 +250,11 @@ Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
 powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
+[plasma-manager-commands.desktop]
+_k_friendly_name=Plasma Manager
+launch-dolphin=Meta+E,,launch-dolphin
+launch-konsole=Meta+T,,launch-konsole
+
 [plasmashell]
 Slideshow Wallpaper Next Image=none,,Next Wallpaper Image
 _k_friendly_name=plasmashell
@@ -299,25 +263,15 @@ activate task manager entry 1=none,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=none,,Activate Task Manager Entry 10
 activate task manager entry 2=none,Meta+2,Activate Task Manager Entry 2
 activate task manager entry 3=none,Meta+3,Activate Task Manager Entry 3
-activate task manager entry 4=Meta+4,Meta+4,Activate Task Manager Entry 4
-activate task manager entry 5=Meta+5,Meta+5,Activate Task Manager Entry 5
+activate task manager entry 4=none,Meta+4,Activate Task Manager Entry 4
+activate task manager entry 5=none,Meta+5,Activate Task Manager Entry 5
 activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 118=none,none,Activate Application Launcher Widget
-activate widget 161=none,none,Activate Digital Clock Widget
-activate widget 168=none,none,Activate Window List Widget
-activate widget 173=none,none,Activate Pager Widget
-activate widget 177=none,none,Activate Window List Widget
-activate widget 185=none,none,Activate Application Launcher Widget
-activate widget 241=none,none,Activate Icons-and-Text Task Manager Widget
-activate widget 242=none,none,Activate Icons-and-Text Task Manager Widget
-activate widget 243=none,none,Activate Icons-and-Text Task Manager Widget
-activate widget 248=none,none,Activate Application Launcher Widget
-activate widget 273=none,none,Activate Application Launcher Widget
-activate widget 302=,none,Activate Application Launcher Widget
-activate widget 354=,none,Activate Window List Widget
+activate widget 109=none,none,Activate Andromeda Launcher Widget
+activate widget 205=,none,Activate Margins Separator Widget
+activate widget 84=none,none,Activate Icons-and-Text Task Manager Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -335,5 +289,12 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][org.kde.dolphin.desktop]
+_launch=none
+
 [services][org.kde.konsole.desktop]
-_launch=Meta+T\tCtrl+Alt+T
+_launch=none
+
+[services][plasma-manager-commands.desktop]
+launch-dolphin=Meta+E
+launch-konsole=Meta+T

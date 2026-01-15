@@ -14,25 +14,16 @@
     lshw
     lm_sensors
 
-    hunspell
-    vlc
-
     # Btrfs tools
     btrfs-progs
     kdePackages.partitionmanager
 
-    # Office
-    libreoffice-qt-fresh
-
     # Development
     bun
+    ghostty
 
     # System utilities
     lenovo-legion
     noisetorch
-    auto-cpufreq
-
-    # Database tools
-    mongodb-compass
   ];
 }

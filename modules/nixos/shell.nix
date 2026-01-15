@@ -10,8 +10,26 @@ let
 in
 {
   # Set default shell
-  users.defaultUserShell = pkgs.bash;
-  environment.shells = with pkgs; [ bash ];
+  users.defaultUserShell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh ];
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
+    };
+
+    ohMyZsh = {
+      enable = true;
+      plugins = [ "git" ];
+      theme = "agnoster";
+    };
+  };
 
   # Bash configuration with oh-my-bash
   programs.bash = {
@@ -23,11 +41,13 @@ in
       update = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
       dots = "cd ~/nixos-dotfiles";
       # VSCode aliases
-      code = "code-insiders";
-      code-stable = "/run/current-system/sw/bin/code";
+      teams-for-linux = "teams-for-linux --ozone-platform=x11";
+      discord = "discord --ozone-platform=x11";
+      mongodb-compass = "mongodb-compass --ozone-platform=x11";
     };
     interactiveShellInit = ''
       export OSH=${oh-my-bash-src}
+      export OSH_THEME="agnoster"
       source "$OSH/oh-my-bash.sh"
     '';
   };

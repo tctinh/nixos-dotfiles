@@ -6,8 +6,19 @@
 
     # Browsers
     microsoft-edge
+    google-chrome
+
+    # Media
+    vlc
 
     # Communication
     discord
+    teams-for-linux
+
+    # Office
+    libreoffice-qt6-fresh
+
+    # Database tools
+    mongodb-compass
   ];
 }
