@@ -11,7 +11,7 @@
     workspace = {
       lookAndFeel = "Nordic-bluish";
       colorScheme = "UtterlyNord";
-      iconTheme = "Tela-circle-nord-dark";
+      iconTheme = "Papirus-Dark";
       wallpaper = null; # Set manually or via files.nix
     };
 
@@ -313,7 +313,7 @@
         };
 
         Icons = {
-          Theme = "Tela-circle-nord-dark";
+          Theme = "Papirus-Dark";
         };
 
         KDE = {

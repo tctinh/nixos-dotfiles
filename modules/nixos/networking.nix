@@ -1,4 +1,5 @@
-{ ... }: {
+{ lib, ... }: {
+  # NetworkManager handles WiFi (KDE Plasma provides the UI)
   networking.networkmanager.enable = true;
 
   # Add /etc/hosts-style static host entries so internal domains resolve locally

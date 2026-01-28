@@ -108,5 +108,11 @@ in {
         "x-scheme-handler/https"
       ];
     };
+    # Hide the default Wayland Chrome entry
+    "com.google.Chrome" = {
+      name = "Google Chrome (Hidden)";
+      exec = "";
+      noDisplay = true;
+    };
   };
 }

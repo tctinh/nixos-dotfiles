@@ -53,7 +53,23 @@ nix flake update
 
 # Development shell
 nix develop
+
+# Python dev shells
+nix develop .#py312
+nix develop .#py313
+nix develop .#py314
+nix develop .#py315
 ```
+
+## Python
+
+This repo installs multiple Python versions side-by-side and provides flake dev shells per version.
+
+- **System interpreters**: `python3.12`, `python3.13`, `python3.14`, `python3.15`
+- **Per-project shells** (recommended): `nix develop .#py313` (or `.#py312`, `.#py314`, `.#py315`)
+- **Dependency workflow**: use `uv` inside the dev shell to manage a local `.venv`
+    - Create venv: `uv venv --python python3.13`
+    - Install deps (if using `pyproject.toml`): `uv sync`
 
 ## Features
 

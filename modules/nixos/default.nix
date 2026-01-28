@@ -2,6 +2,7 @@
   imports = [
     ./desktop.nix
     ./audio.nix
+    ./bluetooth.nix
     ./nvidia.nix
     ./networking.nix
     ./fcitx5.nix

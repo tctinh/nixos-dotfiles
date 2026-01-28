@@ -46,7 +46,7 @@
   users.users.tctinh = {
     isNormalUser = true;
     description = "tctinh";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "plugdev" "input" ];
     # Packages for the user are managed in home-manager modules
   };
 

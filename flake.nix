@@ -39,6 +39,31 @@
         overlays = [ (import vscode-insiders) ];
       };
 
+      # Custom packages
+      hexcore-link = pkgs.callPackage ./pkgs/hexcore-link { };
+      hexcore-link-udev-rules = pkgs.callPackage ./pkgs/hexcore-link/udev-rules.nix { };
+
+      # Wrap Caprine to use X11 for Vietnamese input support
+      caprine-x11 = pkgs.runCommand "caprine-x11" {
+        nativeBuildInputs = [ pkgs.makeWrapper ];
+      } ''
+        mkdir -p $out/bin
+        makeWrapper ${pkgs.caprine}/bin/caprine $out/bin/caprine \
+          --add-flags "--ozone-platform=x11"
+      '';
+
+      caprine-x11-desktop = pkgs.makeDesktopItem {
+        name = "caprine";
+        desktopName = "Caprine";
+        comment = "Elegant Facebook Messenger desktop app";
+        exec = "${caprine-x11}/bin/caprine %U";
+        icon = "caprine";
+        terminal = false;
+        categories = [ "Network" "InstantMessaging" "Chat" ];
+        mimeTypes = [ "x-scheme-handler/caprine" ];
+        startupWMClass = "Caprine";
+      };
+
       # Wrap vscode-insiders with FHS for extension support
       vscode-insiders-fhs = pkgs.buildFHSEnv {
         name = "code-insiders";
@@ -133,7 +158,14 @@
               vscode-insiders-fhs
               vscode-insiders-desktop
               pkgs.gemini-cli
+              # Custom packages
+              hexcore-link
+              caprine-x11
+              caprine-x11-desktop
             ];
+            
+            # Udev rules for Hexcore keyboards
+            services.udev.packages = [ hexcore-link-udev-rules ];
           })
         ];
       };
@@ -147,12 +179,31 @@
         ];
       };
 
-      # Development shell
-      devShells.${system}.default = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          nil  # Nix LSP
-          nixfmt-rfc-style
-        ];
-      };
+      # Development shells
+      devShells.${system} =
+        let
+          mkPythonShell = python: pythonPackages: pkgs.mkShell {
+            buildInputs = [
+              python
+              pkgs.uv
+              pythonPackages.pip
+              pythonPackages.setuptools
+              pythonPackages.wheel
+            ];
+          };
+        in
+        {
+          default = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              nil # Nix LSP
+              nixfmt-rfc-style
+            ];
+          };
+
+          py312 = mkPythonShell pkgs.python312 pkgs.python312Packages;
+          py313 = mkPythonShell pkgs.python313 pkgs.python313Packages;
+          py314 = mkPythonShell pkgs.python314 pkgs.python314Packages;
+          py315 = mkPythonShell pkgs.python315 pkgs.python315Packages;
+        };
     };
 }
