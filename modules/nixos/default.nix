@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./desktop.nix
+    ./niri.nix
     ./audio.nix
     ./bluetooth.nix
     ./nvidia.nix
