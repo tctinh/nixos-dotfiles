@@ -8,7 +8,6 @@ let
     ../flavors/niri/core/users.nix
     ../flavors/niri/hardware/default.nix
     ../flavors/niri/services/default.nix
-    ../flavors/niri/services/greetd.nix
     ../flavors/niri/services/pipewire.nix
     ../flavors/niri/services/dms.nix
     ../flavors/niri/programs/default.nix
@@ -31,10 +30,20 @@ let
     ../hosts/nixos/niri.nix
     ./niri-entry.nix
   ];
+  greetdPath = ../flavors/niri/services/greetd.nix;
+  servicesDefaultPath = ../flavors/niri/services/default.nix;
+  servicesDefaultExists = builtins.pathExists servicesDefaultPath;
+  servicesDefaultContent = if servicesDefaultExists then builtins.readFile servicesDefaultPath else "";
+  servicesDefaultNormalized = builtins.replaceStrings ["\n" "\r"] [" " " "] servicesDefaultContent;
+  servicesDefaultReferencesGreetd = builtins.match ".*greetd\\.nix.*" servicesDefaultNormalized != null;
 
   missing = builtins.filter (path: !(builtins.pathExists path)) requiredPaths;
   missingPaths = builtins.concatStringsSep ", " (map toString missing);
 in
-if missing == []
-then "niri flavor paths present"
-else throw "Missing niri flavor paths: ${missingPaths}"
+if missing != [] then
+  throw "Missing niri flavor paths: ${missingPaths}"
+else if builtins.pathExists greetdPath then
+  throw "Expected flavors/niri/services/greetd.nix to be removed"
+else if servicesDefaultReferencesGreetd then
+  throw "Expected flavors/niri/services/default.nix to stop importing greetd.nix"
+else "niri flavor paths present"
