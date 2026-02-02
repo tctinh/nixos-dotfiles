@@ -6,14 +6,16 @@
 
   programs.dank-material-shell = {
     enable = true;
-    package = inputs.dank-material-shell.packages.${pkgs.system}.default;
     systemd = {
       enable = true;
       restartIfChanged = true;
     };
+    # Feature toggles
     enableClipboardPaste = true;
     enableSystemMonitoring = true;
     enableDynamicTheming = true;
     enableAudioWavelength = true;
+    enableVPN = true;
+    enableCalendarEvents = true;
   };
 }

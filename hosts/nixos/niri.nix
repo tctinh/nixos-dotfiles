@@ -4,6 +4,8 @@
     ./hardware-configuration.nix
     ../../flavors/shared
     ../../flavors/niri
+    # Chaotic-Nyx for CachyOS kernel and other bleeding-edge packages
+    inputs.chaotic.nixosModules.default
   ];
 
   networking.hostName = "nixos-niri";
@@ -11,11 +13,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  boot = {
-    kernelPackages = inputs.chaotic.packages.${pkgs.system}.linuxPackages_cachyos;
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
-  };
+  # Boot loader (kernel config in flavors/niri/core/boot.nix)
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;

@@ -5,6 +5,5 @@
     ./services
     ./programs
     ./niri-apps.nix
-    ./home
   ];
 }
