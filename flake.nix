@@ -27,9 +27,19 @@
       url = "github:auguwu/vscode-insiders-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    dank-material-shell = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    chaotic = {
+      url = "github:chaotic-cx/nyx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, ... }:
+  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, dank-material-shell, chaotic, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -42,27 +52,6 @@
       # Custom packages
       hexcore-link = pkgs.callPackage ./pkgs/hexcore-link { };
       hexcore-link-udev-rules = pkgs.callPackage ./pkgs/hexcore-link/udev-rules.nix { };
-
-      # Wrap Caprine to use X11 for Vietnamese input support
-      caprine-x11 = pkgs.runCommand "caprine-x11" {
-        nativeBuildInputs = [ pkgs.makeWrapper ];
-      } ''
-        mkdir -p $out/bin
-        makeWrapper ${pkgs.caprine}/bin/caprine $out/bin/caprine \
-          --add-flags "--ozone-platform=x11"
-      '';
-
-      caprine-x11-desktop = pkgs.makeDesktopItem {
-        name = "caprine";
-        desktopName = "Caprine";
-        comment = "Elegant Facebook Messenger desktop app";
-        exec = "${caprine-x11}/bin/caprine %U";
-        icon = "caprine";
-        terminal = false;
-        categories = [ "Network" "InstantMessaging" "Chat" ];
-        mimeTypes = [ "x-scheme-handler/caprine" ];
-        startupWMClass = "Caprine";
-      };
 
       # Wrap vscode-insiders with FHS for extension support
       vscode-insiders-fhs = pkgs.buildFHSEnv {
@@ -118,57 +107,69 @@
 
       # User configuration
       username = "tctinh";
-      hostname = "nixos";
     in
     {
       # NixOS system configuration
-      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/${hostname}/configuration.nix
+      nixosConfigurations =
+        let
+          baseModules = [
+            # Include Home Manager as a NixOS module
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
 
-          # Include Home Manager as a NixOS module
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
+                # Add plasma-manager to home-manager
+                sharedModules = [
+                  plasma-manager.homeModules.plasma-manager
+                ];
 
-              # Add plasma-manager to home-manager
-              sharedModules = [
-                plasma-manager.homeModules.plasma-manager
+                users.${username} = import ./home/${username}.nix;
+              };
+            }
+
+            # Extra packages from flake inputs
+            ({ lib, pkgs, ... }: {
+              # Enable nix-ld for VSCode extensions with pre-compiled binaries
+              programs.nix-ld.enable = true;
+              
+              environment.systemPackages = lib.mkAfter [
+                # From flake inputs
+                opencode.packages.${system}.default
+                # VS Code FHS - stable version with extension support
+                pkgs.vscode.fhs
+                # VS Code Insiders - bleeding edge with extension support (FHS wrapped)
+                vscode-insiders-fhs
+                vscode-insiders-desktop
+                pkgs.gemini-cli
+                # Custom packages
+                hexcore-link
               ];
+              
+              # Udev rules for Hexcore keyboards
+              services.udev.packages = [ hexcore-link-udev-rules ];
+            })
+          ];
+        in
+        {
+          plasma = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = { inherit inputs; };
+            modules = [
+              ./hosts/nixos/configuration.nix
+            ] ++ baseModules;
+          };
 
-              users.${username} = import ./home/${username}.nix;
-            };
-          }
-
-          # Extra packages from flake inputs
-          ({ lib, pkgs, ... }: {
-            # Enable nix-ld for VSCode extensions with pre-compiled binaries
-            programs.nix-ld.enable = true;
-            
-            environment.systemPackages = lib.mkAfter [
-              # From flake inputs
-              opencode.packages.${system}.default
-              # VS Code FHS - stable version with extension support
-              pkgs.vscode.fhs
-              # VS Code Insiders - bleeding edge with extension support (FHS wrapped)
-              vscode-insiders-fhs
-              vscode-insiders-desktop
-              pkgs.gemini-cli
-              # Custom packages
-              hexcore-link
-              caprine-x11
-              caprine-x11-desktop
-            ];
-            
-            # Udev rules for Hexcore keyboards
-            services.udev.packages = [ hexcore-link-udev-rules ];
-          })
-        ];
-      };
+          niri = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = { inherit inputs; };
+            modules = [
+              ./hosts/niri/configuration.nix
+            ] ++ baseModules;
+          };
+        };
 
       # Standalone home-manager configuration (for systems without NixOS)
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {

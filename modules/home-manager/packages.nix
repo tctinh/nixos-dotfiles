@@ -17,7 +17,6 @@
 
     # Communication
     discord
-    # caprine - installed via flake with X11 flag for Vietnamese input
     teams-for-linux
     thunderbird
 
