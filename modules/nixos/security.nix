@@ -1,16 +1,9 @@
 { ... }: {
-  cachy = {
-    enable = true;
-    kernel = true; # sysctl performance tweaks
-    udev = true; # udev rules for I/O schedulers
-    systemd = true; # systemd optimizations
-  };
+  # CachyOS-inspired performance tweaks (manual implementation since cachy-tweaks-flake is incompatible)
 
-  boot.plymouth = {
-    enable = true;
-    catppuccin.enable = true;
-    catppuccin.flavor = "mocha";
-  };
+  boot.plymouth.enable = true;
+  catppuccin.plymouth.enable = true;
+  catppuccin.plymouth.flavor = "mocha";
 
   boot.kernelParams = [
     "preempt=voluntary"
