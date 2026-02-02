@@ -7,6 +7,7 @@
     ./files.nix
     ./shell.nix
     ./starship.nix
+    ./helix.nix
   ];
 
   programs.tmux = {
