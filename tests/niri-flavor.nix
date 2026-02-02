@@ -10,6 +10,7 @@ let
     ../flavors/niri/services/default.nix
     ../flavors/niri/services/pipewire.nix
     ../flavors/niri/services/dms.nix
+    ../flavors/niri/services/sddm.nix
     ../flavors/niri/programs/default.nix
     ../flavors/niri/programs/fish.nix
     ../flavors/niri/programs/fonts.nix
