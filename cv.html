@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Tinh To - Principal Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1e293b;
+            /* Slate 800 */
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* Screen Preview Styles */
+        .document-wrapper {
+            width: 100%;
+            max-width: 210mm;
+            /* A4 Width */
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 12mm 15mm;
+            box-sizing: border-box;
+            min-height: 297mm;
+        }
+
+        /* Print Specific Styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm 15mm;
+                /* Browser print margins */
+            }
+
+            body {
+                background: white;
+                margin: 0;
+            }
+
+            .document-wrapper {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            /* Smart Page Breaks */
+            h1,
+            h2,
+            h3,
+            h4 {
+                break-after: avoid;
+            }
+
+            section {
+                break-inside: auto;
+            }
+
+            .avoid-break {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Adjust spacing for print density */
+            .print-tight {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Typography & Components */
+        .section-title {
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #475569;
+            /* Slate 600 */
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .bullet-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.25rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        /* Link Styles */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: #4f46e5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Print Button -->
+    <div class="fixed bottom-8 right-8 no-print z-50">
+        <button onclick="window.print()"
+            class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-full shadow-xl flex items-center gap-2 transition-all cursor-pointer">
+            <i class="fas fa-file-arrow-down"></i> Download PDF
+        </button>
+    </div>
+
+    <div class="document-wrapper">
+
+        <!-- Header -->
+        <header class="border-b border-slate-200 pb-6 mb-6 avoid-break">
+            <h1 class="text-4xl font-bold text-slate-900 tracking-tight mb-2">Tinh To</h1>
+            <h2 class="text-lg text-indigo-700 font-semibold mb-3">Principal Software Architect | Tech Lead | AI Subject
+                Matter Expert</h2>
+
+            <div class="flex flex-wrap gap-y-1 gap-x-4 text-sm text-slate-600 items-center">
+                <span class="flex items-center gap-1.5"><i class="fas fa-envelope text-slate-400"></i>
+                    tchanhtinh@gmail.com</span>
+                <span class="text-slate-300 hidden sm:inline">|</span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-phone text-slate-400"></i> (+84) 918 011
+                    823</span>
+                <span class="text-slate-300 hidden sm:inline">|</span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-slate-400"></i> Ho Chi Minh
+                    City</span>
+                <span class="text-slate-300 hidden sm:inline">|</span>
+                <a href="https://linkedin.com/in/chánh-tính-tô-1b3a573a8"
+                    class="flex items-center gap-1.5 hover:text-indigo-600 transition"><i
+                        class="fab fa-linkedin text-slate-400"></i> linkedin.com/in/chánh-tính-tô-1b3a573a8</a>
+                <span class="text-slate-300 hidden sm:inline">|</span>
+                <a href="https://github.com/tctinh"
+                    class="flex items-center gap-1.5 hover:text-indigo-600 transition"><i
+                        class="fab fa-github text-slate-400"></i> github.com/tctinh</a>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="mb-6 avoid-break">
+            <h3 class="section-title">Professional Summary</h3>
+            <p class="text-sm text-slate-700 leading-relaxed text-justify">
+                <strong>Principal Software Architect</strong> and <strong>Tech Lead</strong> with over 5 years of
+                experience at TMA Solutions. Recognized as a company-wide Subject Matter Expert (SME) in <strong>Agentic
+                    AI</strong> and <strong>High-Scale Systems</strong>. I combine deep backend expertise with
+                architectural intuition to bridge complex business logic and user-centric design. My track record
+                includes defining architectural standards (Hexagonal, CQRS), mentoring senior engineering talent, and
+                leading critical projects for US & EU markets.
+            </p>
+        </section>
+
+        <!-- Technical Expertise -->
+        <section class="mb-6 avoid-break">
+            <h3 class="section-title">Technical Expertise</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                <!-- Col 1: AI -->
+                <div>
+                    <div class="flex items-center gap-2 mb-2 text-slate-900 font-semibold text-sm">
+                        <i class="fas fa-brain text-indigo-600"></i> Agentic AI & Innovation
+                    </div>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Stack:</span>
+                            <span class="text-slate-700">LangChain, LangGraph, Pydantic AI, Agno</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Protocols:</span>
+                            <span class="text-slate-700">MCP, A2A, AGUI, ACP</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Multi-Agent:</span>
+                            <span class="text-slate-700">Supervisor, Swarm, Orchestrate, Meta-Agents</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">RAG:</span>
+                            <span class="text-slate-700">Advanced RAG Strategy, RAG Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Backend -->
+                <div>
+                    <div class="flex items-center gap-2 mb-2 text-slate-900 font-semibold text-sm">
+                        <i class="fas fa-server text-indigo-600"></i> High-Scale Backend
+                    </div>
+                    <div class="space-y-2 text-xs">
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Languages:</span>
+                            <span class="text-slate-700">Go, Elixir (OTP), Java (Quarkus), Python, C</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Data & Storage:</span>
+                            <span class="text-slate-700">TimescaleDB, MongoDB, Postgres, Redis</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Architecture:</span>
+                            <span class="text-slate-700">Event-Driven, CQRS, Hexagonal</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="w-28 font-medium text-slate-500 shrink-0">Technologies:</span>
+                            <span class="text-slate-700">Kubernetes, Kafka, Langfuse</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Header -->
+        <section class="mb-4 avoid-break">
+            <h3 class="section-title">Professional Experience</h3>
+
+            <!-- TMA Solutions -->
+            <div class="mb-5">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h4 class="text-lg font-bold text-slate-900">TMA Solutions</h4>
+                    <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded">2021 - Present</span>
+                </div>
+                <div class="text-indigo-700 font-medium text-sm mb-3">Principal Software Architect & Technical Lead
+                </div>
+
+                <div class="bg-indigo-50/50 border-l-4 border-indigo-200 p-3 rounded-r text-sm text-slate-700">
+                    <p class="font-semibold text-slate-900 mb-1 text-xs uppercase tracking-wide">Key Responsibilities:
+                    </p>
+                    <ul class="bullet-list space-y-1">
+                        <li><strong>SME Authority:</strong> Serve as the company-wide consultant for Agentic AI and
+                            High-Scale Systems, resolving critical architectural bottlenecks.</li>
+                        <li><strong>Standardization:</strong> Defined high-level standards (Hexagonal, CQRS) adopted
+                            across multiple US/EU accounts; responsible for technology selection and governance.</li>
+                        <li><strong>Mentorship:</strong> Mentored 20+ engineers, driving the transition to AI-Native
+                            Engineering through internal training and code reviews.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section class="mb-6">
+            <h4
+                class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 border-b border-dashed border-slate-300 pb-2">
+                Key Projects</h4>
+
+            <div class="space-y-6">
+                <!-- Project 1 -->
+                <div class="avoid-break">
+                    <div class="flex justify-between items-start mb-1">
+                        <strong class="text-slate-900 text-base">Intelligent Healthcare Finance Agent (SaaS)</strong>
+                        <span class="text-xs text-slate-500 font-mono">2025 - 2026</span>
+                    </div>
+                    <div class="text-xs text-indigo-600 mb-2 font-medium">SME & Architect | US Customer</div>
+                    <div class="mb-2 text-xs text-slate-600 italic">
+                        NextJS, Python, Celery, MongoDB, Redis
+                    </div>
+                    <ul class="bullet-list text-sm space-y-1">
+                        <li><strong>Timeline-Aware Logic:</strong> Engineered Multi-Agent System reconciling continuous
+                            invoices vs contracts. Solved "Superseded Amendment" complexity via temporal mapping.</li>
+                        <li><strong>Human-Centric AI:</strong> Designed "Human-in-the-Loop" UI exposing OCR anchors and
+                            reasoning steps for transparent verification.</li>
+                        <li><strong>Advanced RAG:</strong> Architected Hybrid Search & Metadata Pre-filtering. Smart
+                            chunking preserves hierarchical context.</li>
+                        <li><strong>Resilient Orchestration:</strong> Graph-based Node Architecture prevents overload;
+                            optimized for GPT-5 Mini with LLM-as-a-Judge QA.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="avoid-break">
+                    <div class="flex justify-between items-start mb-1">
+                        <strong class="text-slate-900 text-base">Low-Code Agentic AI Platform</strong>
+                        <span class="text-xs text-slate-500 font-mono">2024</span>
+                    </div>
+                    <div class="text-xs text-indigo-600 mb-2 font-medium">SME & Tech Lead | Internal Tools</div>
+                    <div class="mb-2 text-xs text-slate-600 italic">
+                        NextJS, Python, Weaviate, Agno, MCP
+                    </div>
+                    <ul class="bullet-list text-sm space-y-1">
+                        <li><strong>Agentic UI:</strong> Implemented production <strong>AGUI protocol</strong> via
+                            CopilotKit. Integrated with Social Chat Platforms for multi-channel deployment.</li>
+                        <li><strong>Migration Strategy:</strong> Led migration to <strong>Agno/Pydantic AI</strong> for
+                            strict validation; utilized MongoDB for flexible state.</li>
+                        <li><strong>Standardization:</strong> Integrated <strong>MCP</strong> and A2A patterns.
+                            Implemented Langfuse tracing for complex Swarm architectures.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="avoid-break">
+                    <div class="flex justify-between items-start mb-1">
+                        <strong class="text-slate-900 text-base">High-Volume IoT Data & Analytics Platform</strong>
+                        <span class="text-xs text-slate-500 font-mono">2023</span>
+                    </div>
+                    <div class="text-xs text-indigo-600 mb-2 font-medium">Senior Backend | EU Customer</div>
+                    <div class="mb-2 text-xs text-slate-600 italic">
+                        Go, Kafka, TimescaleDB, VueJS
+                    </div>
+                    <ul class="bullet-list text-sm space-y-1">
+                        <li><strong>7M+ Daily Logs Pipeline:</strong> Engineered granular rollups (30s→1d) optimizing
+                            storage for 52 reports and 14 real-time dashboards.</li>
+                        <li><strong>99.999% Resilience:</strong> Re-architected Kafka into a distributed multi-worker
+                            setup to handle burst traffic and cluster failures.</li>
+                        <li><strong>Concurrency:</strong> Solved race conditions via Goroutines; designed 10-year
+                            retention strategy on TimescaleDB.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="avoid-break">
+                    <div class="flex justify-between items-start mb-1">
+                        <strong class="text-slate-900 text-base">Smart Radio Device Management</strong>
+                        <span class="text-xs text-slate-500 font-mono">2022</span>
+                    </div>
+                    <div class="text-xs text-indigo-600 mb-2 font-medium">Junior Full Stack | EU Customer</div>
+                    <div class="mb-2 text-xs text-slate-600 italic">
+                        Java (Quarkus), VueJS, MongoDB, LWM2M
+                    </div>
+                    <ul class="bullet-list text-sm space-y-1">
+                        <li><strong>IoT Protocol:</strong> Engineered LWM2M integration for complex device interactions
+                            (firmware flashing, log extraction).</li>
+                        <li><strong>Multi-Tenant Sync:</strong> Built "Smart Network" sync for Global/Regional
+                            architecture using MongoDB for seamless switching.</li>
+                        <li><strong>Reactive Systems:</strong> Leveraged Quarkus Reactive patterns for non-blocking
+                            high-concurrency communication.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="avoid-break">
+                    <div class="flex justify-between items-start mb-1">
+                        <strong class="text-slate-900 text-base">Telemedicine SaaS</strong>
+                        <span class="text-xs text-slate-500 font-mono">2021</span>
+                    </div>
+                    <div class="text-xs text-indigo-600 mb-2 font-medium">Junior Full Stack | Canada Customer</div>
+                    <div class="mb-2 text-xs text-slate-600 italic">
+                        Elixir, EmberJS, Postgres
+                    </div>
+                    <ul class="bullet-list text-sm space-y-1">
+                        <li><strong>High-Availability Backend:</strong> Built fault-tolerant Erlang/BEAM system;
+                            migrated legacy MSSQL data to Postgres.</li>
+                        <li><strong>Custom Fintech:</strong> Engineered custom Elixir SDK for Stripe to handle complex
+                            billing (multi-tiering, proration).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Projects -->
+        <section class="mb-6 avoid-break">
+            <h3 class="section-title">Personal Projects</h3>
+            <div class="space-y-4">
+
+                <div class="flex items-start justify-between">
+                    <div class="pr-4">
+                        <strong class="text-slate-900 text-sm">Enumerate AI</strong>
+                        <p class="text-xs text-slate-600 leading-relaxed mt-1">
+                            Meta-Agent CLI generating business agents via dialogue using recursive architecture
+                            (MetaAgent → ACPClient). Focuses on autonomous agent generation from natural language
+                            prompts.
+                        </p>
+                    </div>
+                    <span
+                        class="text-[10px] border border-slate-300 text-slate-500 px-2 py-0.5 rounded font-medium whitespace-nowrap">Creator</span>
+                </div>
+
+                <div class="flex items-start justify-between">
+                    <div class="pr-4">
+                        <strong class="text-slate-900 text-sm">RAG Manager (TRAG)</strong>
+                        <p class="text-xs text-slate-600 leading-relaxed mt-1">
+                            Multi-Tenant RAG orchestrating LightRAG/RAG-Anything pipelines. Supports multimodal
+                            ingestion, Neo4j Knowledge Graphs, and Milvus vector storage.
+                        </p>
+                    </div>
+                    <span
+                        class="text-[10px] border border-slate-300 text-slate-500 px-2 py-0.5 rounded font-medium whitespace-nowrap">Creator</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source -->
+        <section class="mb-6 avoid-break">
+            <h3 class="section-title">Open Source Contributions</h3>
+            <div class="space-y-4">
+                <div class="flex items-start justify-between">
+                    <div class="pr-4">
+                        <strong class="text-slate-900 text-sm">Agent-Hive</strong>
+                        <p class="text-xs text-slate-600 mt-1">Framework for "Plan First" Multi-Agent Orchestration with
+                            batched parallelism.</p>
+                    </div>
+                    <span
+                        class="text-[10px] border border-slate-300 text-slate-500 px-2 py-0.5 rounded font-medium whitespace-nowrap">Creator</span>
+                </div>
+                <div class="flex items-start justify-between">
+                    <div class="pr-4">
+                        <strong class="text-slate-900 text-sm">Opencode-Antigravity-Auth</strong>
+                        <p class="text-xs text-slate-600 mt-1">Opencode auth provider for Google Antigravity with
+                            multi-account rotation.</p>
+                    </div>
+                    <span
+                        class="text-[10px] border border-slate-300 text-slate-500 px-2 py-0.5 rounded font-medium whitespace-nowrap">Maintainer</span>
+                </div>
+                <div class="flex items-start justify-between">
+                    <div class="pr-4">
+                        <strong class="text-slate-900 text-sm">VS Code AI Development Suite</strong>
+                        <p class="text-xs text-slate-600 mt-1">Tooling suite: VectorDB Studio (Milvus), LLM Trace Viewer
+                            (Langfuse).</p>
+                    </div>
+                    <span
+                        class="text-[10px] border border-slate-300 text-slate-500 px-2 py-0.5 rounded font-medium whitespace-nowrap">Creator</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="avoid-break">
+            <h3 class="section-title">Education</h3>
+            <div class="flex justify-between items-center">
+                <div>
+                    <h4 class="text-sm font-bold text-slate-900">Software Engineer</h4>
+                    <p class="text-sm text-slate-600">Can Tho University</p>
+                </div>
+                <span class="text-sm font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">2021</span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -107,12 +107,15 @@
 
       # User configuration
       username = "tctinh";
-    in
-    {
-      # NixOS system configuration
-      nixosConfigurations =
-        let
-          baseModules = [
+      hostname = "nixos";
+
+      mkNixosConfiguration = hostModule:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            hostModule
+
             # Include Home Manager as a NixOS module
             home-manager.nixosModules.home-manager
             {
@@ -134,7 +137,7 @@
             ({ lib, pkgs, ... }: {
               # Enable nix-ld for VSCode extensions with pre-compiled binaries
               programs.nix-ld.enable = true;
-              
+
               environment.systemPackages = lib.mkAfter [
                 # From flake inputs
                 opencode.packages.${system}.default
@@ -147,29 +150,17 @@
                 # Custom packages
                 hexcore-link
               ];
-              
+
               # Udev rules for Hexcore keyboards
               services.udev.packages = [ hexcore-link-udev-rules ];
             })
           ];
-        in
-        {
-          plasma = nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = { inherit inputs; };
-            modules = [
-              ./hosts/nixos/configuration.nix
-            ] ++ baseModules;
-          };
-
-          niri = nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = { inherit inputs; };
-            modules = [
-              ./hosts/niri/configuration.nix
-            ] ++ baseModules;
-          };
         };
+    in
+    {
+      # NixOS system configuration
+      nixosConfigurations.${hostname} = mkNixosConfiguration ./hosts/${hostname}/configuration.nix;
+      nixosConfigurations.plasma = mkNixosConfiguration ./hosts/nixos/plasma.nix;
 
       # Standalone home-manager configuration (for systems without NixOS)
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
