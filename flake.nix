@@ -27,9 +27,16 @@
       url = "github:auguwu/vscode-insiders-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    cachy-tweaks = {
+      url = "github:AniviaFlome/cachy-tweaks-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, ... }:
+  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, cachy-tweaks, catppuccin, ... }:
     let
       system = "x86_64-linux";
 
@@ -126,6 +133,9 @@
         inherit system;
         modules = [
           ./hosts/${hostname}/configuration.nix
+
+          cachy-tweaks.nixosModules.default
+          catppuccin.nixosModules.catppuccin
 
           # Include Home Manager as a NixOS module
           home-manager.nixosModules.home-manager
