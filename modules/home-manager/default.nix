@@ -4,6 +4,8 @@
     ./packages.nix
     ./noisetorch.nix
     ./files.nix
+    ./shell.nix
+    ./starship.nix
   ];
 
   programs.tmux = {
