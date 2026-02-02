@@ -28,6 +28,8 @@ let
     ../flavors/niri/home/terminal/software/git.nix
     ../flavors/niri/home/wayland/niri/default.nix
     ../flavors/niri/home/packages/default.nix
+    ../hosts/nixos/niri.nix
+    ./niri-entry.nix
   ];
 
   missing = builtins.filter (path: !(builtins.pathExists path)) requiredPaths;

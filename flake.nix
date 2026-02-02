@@ -161,6 +161,7 @@
       # NixOS system configuration
       nixosConfigurations.${hostname} = mkNixosConfiguration ./hosts/${hostname}/configuration.nix;
       nixosConfigurations.plasma = mkNixosConfiguration ./hosts/nixos/plasma.nix;
+      nixosConfigurations.niri = mkNixosConfiguration ./hosts/nixos/niri.nix;
 
       # Standalone home-manager configuration (for systems without NixOS)
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
