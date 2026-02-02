@@ -2,6 +2,7 @@
   imports = [
     ./desktop.nix
     ./niri.nix
+    ./security.nix
     ./audio.nix
     ./bluetooth.nix
     ./nvidia.nix
