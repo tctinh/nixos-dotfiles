@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./plasma.nix
+    ./niri.nix
     ./packages.nix
     ./noisetorch.nix
     ./files.nix
