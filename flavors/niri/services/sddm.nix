@@ -1,4 +1,22 @@
 { config, pkgs, ... }:
+let
+  niriSession = pkgs.stdenvNoCC.mkDerivation {
+    pname = "niri-session";
+    version = "1";
+    dontUnpack = true;
+    installPhase = ''
+      mkdir -p $out/share/wayland-sessions
+      cat > $out/share/wayland-sessions/niri.desktop <<'EOF'
+      [Desktop Entry]
+      Name=Niri
+      Comment=Niri Wayland session
+      Exec=${pkgs.niri}/bin/niri-session
+      Type=Application
+      EOF
+    '';
+    passthru.providedSessions = [ "niri" ];
+  };
+in
 {
   services.displayManager.sddm = {
     enable = true;
@@ -6,13 +24,7 @@
   };
 
   services.displayManager.sessionPackages = [
-    (pkgs.writeTextDir "share/wayland-sessions/niri.desktop" ''
-      [Desktop Entry]
-      Name=Niri
-      Comment=Niri Wayland session
-      Exec=${pkgs.niri}/bin/niri-session
-      Type=Application
-    '')
+    niriSession
   ];
 
   security.pam.services.sddm = {
