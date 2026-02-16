@@ -30,7 +30,14 @@ nix develop .#py312
 nix develop .#py313
 nix develop .#py314
 nix develop .#py315
+
+# Backup KDE Plasma settings (snapshot/reference only)
+bash scripts/backup-kde.sh --dry-run  # Preview
+bash scripts/backup-kde.sh             # Backup to dotfiles/kde
+git diff -- dotfiles/kde               # Review
 ```
+
+> **Safety:** Snapshots are reference-only. `modules/home-manager/plasma.nix` is the declarative source of truth. Machine-specific files may need per-host pruning.
 
 ## Python workflow (recommended)
 

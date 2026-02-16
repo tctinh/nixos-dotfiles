@@ -59,7 +59,17 @@ nix develop .#py312
 nix develop .#py313
 nix develop .#py314
 nix develop .#py315
+
+# Backup KDE snapshot
+bash scripts/backup-kde.sh --dry-run  # Preview changes
+bash scripts/backup-kde.sh             # Copy files to dotfiles/kde
+git diff -- dotfiles/kde               # Review captured config
 ```
+
+> **Note:** Snapshot files in `dotfiles/kde/` are **reference/backups only**.  
+> `modules/home-manager/plasma.nix` remains the declarative source of truth.  
+> Machine-specific files (`kwinoutputconfig.json`, `kcminputrc`) are host-tied and may need per-host pruning.  
+> Avoid linking all raw snapshot files directly through Home Manager.
 
 ## Python
 
