@@ -106,7 +106,9 @@ ForegroundVisited=143,188,187
 
 [General]
 ColorScheme=UtterlyNord
-ColorSchemeHash=a935e515e29025e6636b957f51c3dda99b47f986
+ColorSchemeHash=faaf5d0b6da1b5cb6a1d51987c1f844813d2a797
+TerminalApplication=/nix/store/4fkwvnja07zmivbi0l68351rzd3166hp-ghostty-1.2.3/bin/ghostty --gtk-single-instance=true
+TerminalService=com.mitchellh.ghostty.desktop
 fixed=JetBrainsMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 font=Inter,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 menuFont=Inter,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -114,7 +116,7 @@ smallestReadableFont=Inter,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 toolBarFont=Inter,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
-Theme=Tela-circle-nord-dark
+Theme=Papirus-Dark
 
 [KDE]
 LookAndFeelPackage=Nordic-bluish
@@ -123,7 +125,7 @@ widgetStyle=Breeze
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 Show Full Path=false
 Show Inline Previews=true
@@ -136,6 +138,10 @@ Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=140
 View Style=DetailTree
+
+[KScreen]
+ScreenScaleFactors=eDP-2=1;DP-2=1;DP-1=1;
+XwaylandClientsScale=false
 
 [WM]
 activeBackground=46,52,64
