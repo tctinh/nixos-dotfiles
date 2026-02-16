@@ -2,8 +2,14 @@
 Id_1=Desktop_1
 Id_2=Desktop_2
 Id_3=Desktop_3
+Name_1=Desktop 1
+Name_2=Desktop 2
+Name_3=Desktop 3
 Number=3
 Rows=1
+
+[EdgeBarrier]
+EdgeBarrier=0
 
 [Effect-overview]
 BorderActivate=9
@@ -26,16 +32,18 @@ PopupHideDelay=200
 [Script-krohnkite]
 directionalKeyDwm=true
 directionalKeyFocus=false
+floatSkipPagerWindows=true
 ignoreClass=krunner,yakuake,spectacle,kded5,xwaylandvideobridge,plasmashell,ksplashqml,org.kde.plasmashell,org.kde.polkit-kde-authentication-agent-1,org.kde.kruler,kruler,kwin_wayland,ksmserver-logout-greeter,Waydroid,waydroid.com.netease.g108na
 ignoreTitle=waydroid
+noTileBorder=true
 screenGapBetween=10
 screenGapBottom=10
 screenGapLeft=10
 screenGapRight=10
-screenGapTop=10
+screenGapTop=20
 
 [Script-kzones]
-layoutsJson=[\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 50,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            }\n        ]\n    },\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 25\n            },\n            {\n                "x": 25,\n                "y": 0,\n                "height": 100,\n                "width": 50\n            },\n            {\n                "x": 75,\n                "y": 0,\n                "height": 100,\n                "width": 25\n            }\n        ]\n    },\n    {\n        "name": "DWM",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 75\n            },\n            {\n                "x": 75,\n                "y": 50,\n                "height": 50,\n                "width": 25\n            },\n            {\n                "x": 75,\n                "y": 0,\n                "height": 50,\n                "width": 25\n            }\n        ]\n    },\n    {\n        "name": "Full",\n        "zones": [\n            {\n                "x": 0,\n                "y": 0,\n                "height": 100,\n                "width": 100\n            }\n        ]\n    }\n]
+layoutsJson=\x5b\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 50 },\n            { "x": 50, "y": 0, "height": 100, "width": 50 }\n        \x5d\n    },\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 25 },\n            { "x": 25, "y": 0, "height": 100, "width": 50 },\n            { "x": 75, "y": 0, "height": 100, "width": 25 }\n        \x5d\n    },\n    {\n        "name": "DWM",\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 75 },\n            { "x": 75, "y": 50, "height": 50, "width": 25 },\n            { "x": 75, "y": 0, "height": 50, "width": 25 }\n        \x5d\n    },\n    {\n        "name": "Full",\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 100 }\n        \x5d\n    }\n\x5d
 showOsdMessages=false
 trackLayoutPerScreen=true
 zoneOverlayIndicatorDisplay=1
@@ -51,6 +59,15 @@ LayoutName=thumbnail_grid
 
 [Tiling]
 padding=4
+
+[Tiling][0549ba13-18a1-4820-9284-5f3406bfb55e][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][2c239f79-9471-4644-8c4d-6989ba2473a6][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][61da6399-862c-46b2-be32-7bfffd363247][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6328cab0-95f2-4828-97d8-dd978f45fb1d][28e5ecb0-fdf3-4f9a-ae30-6f3e61a0e105]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -79,6 +96,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][7c471acf-c8e2-51b0-961a-c92d3eef94c0]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][813d7f42-b46d-4017-b869-fc2465819dc4][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][97bbc6be-7126-4d6e-a630-aea54b2a127c][28e5ecb0-fdf3-4f9a-ae30-6f3e61a0e105]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -97,6 +117,12 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][Desktop_1][2c11342f-c720-4439-b5cb-01ab72738375]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][Desktop_1][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_1][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][Desktop_1][7e512389-0153-4957-96ff-a14c9e37cab3]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -104,6 +130,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_1][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][d97df37a-85d9-4c78-b308-a2551b361d4a]
@@ -115,6 +144,12 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][Desktop_2][2c11342f-c720-4439-b5cb-01ab72738375]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][Desktop_2][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_2][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][Desktop_2][7e512389-0153-4957-96ff-a14c9e37cab3]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -122,6 +157,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_2][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][d97df37a-85d9-4c78-b308-a2551b361d4a]
@@ -133,6 +171,12 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][Desktop_3][2c11342f-c720-4439-b5cb-01ab72738375]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][Desktop_3][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_3][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][Desktop_3][7e512389-0153-4957-96ff-a14c9e37cab3]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -142,10 +186,16 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][Desktop_3][915637ec-0d81-4976-b6ce-c4baf1d5b16c]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][Desktop_3][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][Desktop_3][d97df37a-85d9-4c78-b308-a2551b361d4a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][a3544e08-6c98-5875-8f11-1db6ff42c10e]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][aee3ebf5-145b-48e7-9df1-b36eb921e83f][315ca0aa-a6b2-4d08-9987-2a16d362381c]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][cf67bb66-549d-5e93-a2e1-bb05ca2d7b7c]
@@ -183,6 +233,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Windows]
 AutoRaise=true
+BorderlessMaximizedWindows=false
 ClickRaise=true
 ElectricBorderMaximize=false
 ElectricBorderTiling=false
@@ -191,7 +242,5 @@ RollOverDesktops=true
 [org.kde.kdecoration2]
 BorderSize=Tiny
 BorderSizeAuto=false
-ButtonsOnLeft=SF
+ButtonsOnLeft=S
 ButtonsOnRight=IAX
-library=org.kde.breeze
-theme=Breeze
