@@ -1,19 +1,21 @@
 { ... }: {
   imports = [
-    ./desktop.nix
-    ./niri.nix
-    ./security.nix
+    # Hardware and desktop
     ./audio.nix
     ./bluetooth.nix
-    ./nvidia.nix
-    ./networking.nix
+    ./desktop.nix
     ./fcitx5.nix
+    ./fonts.nix
+    ./fprintd.nix
+    ./gaming.nix
+    ./networking.nix
+    ./nvidia.nix
+
+    # System behavior and tooling
+    ./packages.nix
+    ./power.nix
+    ./security.nix
     ./shell.nix
     ./virtualization.nix
-    ./gaming.nix
-    ./packages.nix
-    ./fprintd.nix
-    ./fonts.nix
-    ./power.nix
   ];
 }

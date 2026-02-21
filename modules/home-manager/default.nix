@@ -1,15 +1,14 @@
 { ... }: {
   imports = [
-    ./plasma.nix
-    ./niri.nix
-    ./packages.nix
-    ./noisetorch.nix
     ./files.nix
+    ./noisetorch.nix
+    ./packages.nix
+    ./plasma.nix
     ./shell.nix
     ./starship.nix
-    ./helix.nix
   ];
 
+  # Terminal multiplexer defaults
   programs.tmux = {
     enable = true;
     mouse = true;

@@ -1,11 +1,16 @@
+[Compositing]
+AllowTearing=false
+
 [Desktops]
 Id_1=Desktop_1
 Id_2=Desktop_2
 Id_3=Desktop_3
+Id_4=d68b88ba-4847-47ab-823c-31673974088c
 Name_1=Desktop 1
 Name_2=Desktop 2
 Name_3=Desktop 3
-Number=3
+Name_4=New Desktop
+Number=4
 Rows=1
 
 [EdgeBarrier]
@@ -19,8 +24,8 @@ MoveResize=93
 
 [Plugins]
 fadedesktopEnabled=false
-krohnkiteEnabled=false
-kzonesEnabled=true
+krohnkiteEnabled=true
+kzonesEnabled=false
 rememberwindowpositionsEnabled=true
 shakecursorEnabled=true
 slideEnabled=false
@@ -40,10 +45,10 @@ screenGapBetween=10
 screenGapBottom=10
 screenGapLeft=10
 screenGapRight=10
-screenGapTop=20
+screenGapTop=18
 
 [Script-kzones]
-layoutsJson=\x5b\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 50 },\n            { "x": 50, "y": 0, "height": 100, "width": 50 }\n        \x5d\n    },\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 25 },\n            { "x": 25, "y": 0, "height": 100, "width": 50 },\n            { "x": 75, "y": 0, "height": 100, "width": 25 }\n        \x5d\n    },\n    {\n        "name": "DWM",\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 75 },\n            { "x": 75, "y": 50, "height": 50, "width": 25 },\n            { "x": 75, "y": 0, "height": 50, "width": 25 }\n        \x5d\n    },\n    {\n        "name": "Full",\n        "zones": \x5b\n            { "x": 0, "y": 0, "height": 100, "width": 100 }\n        \x5d\n    }\n\x5d
+layoutsJson=[\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 50 },\n            { "x": 50, "y": 0, "height": 100, "width": 50 }\n        ]\n    },\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 25 },\n            { "x": 25, "y": 0, "height": 100, "width": 50 },\n            { "x": 75, "y": 0, "height": 100, "width": 25 }\n        ]\n    },\n    {\n        "name": "DWM",\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 75 },\n            { "x": 75, "y": 50, "height": 50, "width": 25 },\n            { "x": 75, "y": 0, "height": 50, "width": 25 }\n        ]\n    },\n    {\n        "name": "Full",\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 100 }\n        ]\n    }\n]
 showOsdMessages=false
 trackLayoutPerScreen=true
 zoneOverlayIndicatorDisplay=1
@@ -60,10 +65,16 @@ LayoutName=thumbnail_grid
 [Tiling]
 padding=4
 
+[Tiling][02276c9a-d534-406f-ad0d-2f7a2e19f5c9][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][0549ba13-18a1-4820-9284-5f3406bfb55e][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][2c239f79-9471-4644-8c4d-6989ba2473a6][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][35ea0e5e-3b42-494d-b542-0ffce659713c][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][61da6399-862c-46b2-be32-7bfffd363247][315ca0aa-a6b2-4d08-9987-2a16d362381c]
@@ -201,6 +212,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][cf67bb66-549d-5e93-a2e1-bb05ca2d7b7c]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][d68b88ba-4847-47ab-823c-31673974088c][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][dcfb0350-bb9a-4c04-bda0-634e6d80578b][2c11342f-c720-4439-b5cb-01ab72738375]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -238,6 +252,9 @@ ClickRaise=true
 ElectricBorderMaximize=false
 ElectricBorderTiling=false
 RollOverDesktops=true
+
+[Xwayland]
+Scale=1.9
 
 [org.kde.kdecoration2]
 BorderSize=Tiny

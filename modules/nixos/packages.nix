@@ -3,42 +3,53 @@
   # $ nix search wget
 
   environment.systemPackages = with pkgs; [
-    # Core tools
+    # Core CLI
+    gh
+    git
+    jq
+    nodejs
     vim
     wget
-    git
-    gh
-    nodejs
-    jq
-    fastfetch
-    htop
-    lshw
-    lm_sensors
 
-    # Btrfs tools
-    btrfs-progs
-    kdePackages.partitionmanager
-
-    # Development
+    # Development toolchains
     bun
-    zig
-    ghostty
-    via
-    remmina
-
-    # Python (multi-version)
+    gnumake
     python312
     (lib.meta.lowPrio python313)
     (lib.meta.lowPrio python314)
     (lib.meta.lowPrio python315)
     uv
-    pyenv
+    zig
 
-    # Window
+    # Desktop and productivity apps
+    ghostty
+    remmina
+    via
+
+    # Gaming and graphics tools
+    appimage-run
+    goverlay
+    lact
+    mangohud
     protonplus
+    vkbasalt
+    vulkan-tools
 
-    # System utilities
+    # System observability and hardware
+    fastfetch
+    htop
     lenovo-legion
-    noisetorch
+    lm_sensors
+    lshw
+
+    # Filesystem and disk tools
+    btrfs-progs
+    kdePackages.partitionmanager
+
+    # Utilities
+    android-tools
+    p7zip
+    unrar
+    wl-clipboard
   ];
 }

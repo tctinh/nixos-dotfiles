@@ -42,3 +42,9 @@ secrets/
 node_modules/
 
 .hive
+
+# Local host overrides (machine/work specific)
+hosts/*/extra-hosts.local
+
+# Fcitx generated cache
+dotfiles/fcitx5/conf/cached_layouts

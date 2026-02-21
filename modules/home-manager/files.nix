@@ -18,7 +18,6 @@ in {
   # Electron/Chromium apps need these flags for native Wayland IME support
   home.file.".config/chrome-flags.conf".text = waylandImeFlags;
   home.file.".config/chromium-flags.conf".text = waylandImeFlags;
-  home.file.".config/microsoft-edge-stable-flags.conf".text = waylandImeFlags;
   home.file.".config/google-chrome-dev-flags.conf".text = waylandImeFlags;
 
   # Teams for Linux (Electron)
@@ -27,7 +26,7 @@ in {
   # Ghostty terminal configuration
   home.file.".config/ghostty/config".text = ''
     # Shell
-    command = zsh
+    command = fish
 
     # Font
     font-family = JetBrainsMono Nerd Font
@@ -69,14 +68,6 @@ in {
       type = "Application";
       categories = [ "Development" "IDE" ];
     };
-    "teams-for-linux" = {
-      name = "Teams for Linux";
-      exec = "teams-for-linux --ozone-platform=x11 %U";
-      icon = "teams-for-linux";
-      terminal = false;
-      type = "Application";
-      categories = [ "Network" "InstantMessaging" ];
-    };
     discord = {
       name = "Discord";
       exec = "discord --ozone-platform=x11 %U";
@@ -93,20 +84,13 @@ in {
       type = "Application";
       categories = [ "Development" "Database" ];
     };
-    "google-chrome" = {
-      name = "Google Chrome";
-      exec = "google-chrome-stable --ozone-platform=x11 %U";
-      icon = "google-chrome";
+    "teams-for-linux" = {
+      name = "Teams for Linux";
+      exec = "teams-for-linux --ozone-platform=x11 %U";
+      icon = "teams-for-linux";
       terminal = false;
       type = "Application";
-      categories = [ "Network" "WebBrowser" ];
-      mimeType = [
-        "text/html"
-        "text/xml"
-        "application/xhtml+xml"
-        "x-scheme-handler/http"
-        "x-scheme-handler/https"
-      ];
+      categories = [ "Network" "InstantMessaging" ];
     };
     # Hide the default Wayland Chrome entry
     "com.google.Chrome" = {

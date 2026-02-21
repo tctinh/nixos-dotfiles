@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  home.sessionVariables = {
-    EDITOR = "hx";
-  };
-
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -15,14 +11,7 @@
       tree = "eza --tree --group-directories-first --icons";
     };
     interactiveShellInit = ''
-      set -g fish_key_bindings fish_vi_key_bindings
-
-      function fish_mode_prompt; end
-
-      set -g fish_cursor_default block
-      set -g fish_cursor_insert line
-      set -g fish_cursor_replace_one underscore
-      set -g fish_cursor_visual block
+      set -g fish_greeting
 
       bind \e\eOA history-prefix-search-backward
       bind \e\eOB history-prefix-search-forward
@@ -41,7 +30,7 @@
       function fm
         set -l file (fd --type f . --hidden --exclude .git | fzf)
         if test -n "$file"
-          $EDITOR "$file"
+          kate "$file" &
         end
       end
 

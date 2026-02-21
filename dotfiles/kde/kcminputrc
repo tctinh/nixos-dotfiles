@@ -1,5 +1,8 @@
 [Keyboard]
 NumLock=0
 
+[Libinput][10182][480][GXTP5100:00 27C6:01E0 Touchpad]
+Enabled=false
+
 [Mouse]
 cursorTheme=Breeze_Light

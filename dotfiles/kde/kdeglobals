@@ -140,8 +140,7 @@ Speedbar Width=140
 View Style=DetailTree
 
 [KScreen]
-ScreenScaleFactors=eDP-2=1;DP-2=1;DP-1=1;
-XwaylandClientsScale=false
+ScreenScaleFactors=eDP-2=1;
 
 [WM]
 activeBackground=46,52,64

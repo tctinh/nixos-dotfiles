@@ -16,6 +16,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    jovian = {
+      url = "git+https://github.com/Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # opencode uses its own nixpkgs (unstable) to avoid compatibility issues
     opencode = {
       url = "github:anomalyco/opencode?ref=dev";
@@ -29,9 +34,11 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    # Chaotic-Nyx removed (archived)
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, catppuccin, ... }:
+  outputs = { self, nixpkgs, home-manager, plasma-manager, opencode, vscode-insiders, catppuccin, jovian, ... }:
     let
       system = "x86_64-linux";
 
@@ -46,77 +53,10 @@
       hexcore-link-udev-rules = pkgs.callPackage ./pkgs/hexcore-link/udev-rules.nix { };
 
       # Wrap Caprine to use X11 for Vietnamese input support
-      caprine-x11 = pkgs.runCommand "caprine-x11" {
-        nativeBuildInputs = [ pkgs.makeWrapper ];
-      } ''
-        mkdir -p $out/bin
-        makeWrapper ${pkgs.caprine}/bin/caprine $out/bin/caprine \
-          --add-flags "--ozone-platform=x11"
-      '';
-
-      caprine-x11-desktop = pkgs.makeDesktopItem {
-        name = "caprine";
-        desktopName = "Caprine";
-        comment = "Elegant Facebook Messenger desktop app";
-        exec = "${caprine-x11}/bin/caprine %U";
-        icon = "caprine";
-        terminal = false;
-        categories = [ "Network" "InstantMessaging" "Chat" ];
-        mimeTypes = [ "x-scheme-handler/caprine" ];
-        startupWMClass = "Caprine";
-      };
+      inherit (pkgs.callPackage ./pkgs/caprine-x11 { }) caprine-x11 caprine-x11-desktop;
 
       # Wrap vscode-insiders with FHS for extension support
-      vscode-insiders-fhs = pkgs.buildFHSEnv {
-        name = "code-insiders";
-        targetPkgs = p: [
-          pkgs.vscode-insiders
-          # Required for extensions with native binaries
-          p.stdenv.cc.cc.lib
-          p.zlib
-          p.openssl
-          p.curl
-          p.libsecret
-          p.libkrb5
-          p.icu
-          # Network/auth for syncing
-          p.glib
-          p.nss
-          p.nspr
-          p.atk
-          p.cups
-          p.dbus
-          p.expat
-          p.libdrm
-          p.libxkbcommon
-          p.pango
-          p.cairo
-          p.mesa
-          p.alsa-lib
-          # Additional deps from wiki
-          p.krb5
-          p.libsoup_3
-          p.webkitgtk_4_1
-        ];
-        runScript = "code-insiders";
-        profile = ''
-          export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
-        '';
-      };
-
-      # Desktop entry for VS Code Insiders
-      vscode-insiders-desktop = pkgs.makeDesktopItem {
-        name = "code-insiders";
-        desktopName = "Visual Studio Code - Insiders";
-        comment = "Code Editing. Redefined.";
-        exec = "${vscode-insiders-fhs}/bin/code-insiders %F";
-        icon = "vscode-insiders";
-        terminal = false;
-        categories = [ "Utility" "TextEditor" "Development" "IDE" ];
-        mimeTypes = [ "text/plain" "inode/directory" ];
-        startupNotify = true;
-        startupWMClass = "Code - Insiders";
-      };
+      inherit (pkgs.callPackage ./pkgs/vscode-insiders-fhs { }) vscode-insiders-fhs vscode-insiders-desktop;
 
       # User configuration
       username = "tctinh";
@@ -126,10 +66,15 @@
       # NixOS system configuration
       nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
         inherit system;
+        inherit pkgs;
+        specialArgs = {
+          inherit username hostname;
+        };
         modules = [
           ./hosts/${hostname}/configuration.nix
 
           catppuccin.nixosModules.catppuccin
+          jovian.nixosModules.default
 
           # Include Home Manager as a NixOS module
           home-manager.nixosModules.home-manager
@@ -138,6 +83,9 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               backupFileExtension = "backup";
+              extraSpecialArgs = {
+                inherit username hostname;
+              };
 
               # Add plasma-manager to home-manager
               sharedModules = [
@@ -177,6 +125,9 @@
       # Standalone home-manager configuration (for systems without NixOS)
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {
+          inherit username hostname;
+        };
         modules = [
           plasma-manager.homeModules.plasma-manager
           ./home/${username}.nix

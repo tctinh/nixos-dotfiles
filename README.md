@@ -25,7 +25,7 @@ nixos-dotfiles/
 │   │   ├── nvidia.nix            # NVIDIA Optimus/Prime
 │   │   ├── networking.nix        # NetworkManager + hosts
 │   │   ├── fcitx5.nix            # Vietnamese input
-│   │   ├── shell.nix             # Bash + oh-my-bash
+│   │   ├── shell.nix             # Fish shell
 │   │   ├── virtualization.nix    # Docker + Waydroid
 │   │   ├── gaming.nix            # Steam + Lutris
 │   │   └── packages.nix          # System packages
@@ -69,6 +69,7 @@ git diff -- dotfiles/kde               # Review captured config
 > **Note:** Snapshot files in `dotfiles/kde/` are **reference/backups only**.  
 > `modules/home-manager/plasma.nix` remains the declarative source of truth.  
 > Machine-specific files (`kwinoutputconfig.json`, `kcminputrc`) are host-tied and may need per-host pruning.  
+> KWin script state is also captured (`dotfiles/kde/kwin/scripts/*` and `dotfiles/kde/kwin/kwinscripts.knsregistry`).  
 > Avoid linking all raw snapshot files directly through Home Manager.
 
 ## Python
@@ -120,7 +121,7 @@ This repo installs multiple Python versions side-by-side and provides flake dev 
 
 ### User (`modules/home-manager/packages.nix`)
 - Editors: `zed-editor`
-- Browsers: `microsoft-edge`
+- Browsers: `google-chrome`
 - Communication: `teams-for-linux`, `discord`
 
 ### Gaming (`modules/nixos/gaming.nix`)
@@ -133,6 +134,7 @@ This repo installs multiple Python versions side-by-side and provides flake dev 
 | Add system packages | `modules/nixos/packages.nix` |
 | Add user apps | `modules/home-manager/packages.nix` |
 | Change KDE settings | `modules/home-manager/plasma.nix` |
+| Sync live KDE state (hybrid) | `scripts/sync-kde.sh` |
 | Add shell aliases | `modules/nixos/shell.nix` |
 | Add new host | See QUICKSTART.md |
 

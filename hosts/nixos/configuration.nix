@@ -2,9 +2,10 @@
 # your system. Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running 'nixos-help').
 
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, lib, username, hostname, ... }:
+let
+  localExtraHostsFile = "${toString ./.}/extra-hosts.local";
+in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -16,7 +17,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = hostname;
+  networking.extraHosts = lib.optionalString
+    (builtins.pathExists localExtraHostsFile)
+    (builtins.readFile localExtraHostsFile);
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/8429a579-0542-4984-a3b4-9d441fdea12f";
@@ -43,30 +47,17 @@
   };
 
   # Define a user account. Don't forget to set a password with 'passwd'.
-  users.users.tctinh = {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "tctinh";
-    extraGroups = [ "networkmanager" "wheel" "docker" "plugdev" "input" ];
+    description = username;
+    extraGroups = [ "networkmanager" "wheel" "docker" "plugdev" "input" "adbusers" ];
+    shell = pkgs.fish;
     # Packages for the user are managed in home-manager modules
   };
-
-  # Git configuration
-  programs.git = {
-    enable = true;
-    config = {
-      user.name = "tctinh";
-      user.email = "tctinh@tma.com.vn";
-      init.defaultBranch = "main";
-      pull.rebase = false;
-      push.autoSetupRemote = true;
-    };
-  };
+  users.groups.adbusers = {};
 
   # Install firefox.
   programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

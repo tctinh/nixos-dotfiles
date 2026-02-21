@@ -31,13 +31,19 @@ nix develop .#py313
 nix develop .#py314
 nix develop .#py315
 
-# Backup KDE Plasma settings (snapshot/reference only)
-bash scripts/backup-kde.sh --dry-run  # Preview
-bash scripts/backup-kde.sh             # Backup to dotfiles/kde
-git diff -- dotfiles/kde               # Review
+# Sync KDE Plasma settings (hybrid workflow)
+bash scripts/sync-kde.sh                             # Snapshot + declarative suggestions
+git diff -- dotfiles/kde                             # Review snapshot drift
+git diff -- modules/home-manager/plasma.nix          # Review declarative updates
+nix build .#homeConfigurations.tctinh.activationPackage
+sudo nixos-rebuild switch --flake .#nixos
+
+# Snapshot only (reference backup)
+bash scripts/backup-kde.sh --dry-run                 # Preview
+bash scripts/backup-kde.sh                           # Backup to dotfiles/kde
 ```
 
-> **Safety:** Snapshots are reference-only. `modules/home-manager/plasma.nix` is the declarative source of truth. Machine-specific files may need per-host pruning.
+> **Safety:** Use hybrid sync by default: snapshot live KDE first, then manually promote stable settings into `modules/home-manager/plasma.nix`. Keep host-specific files (for example `kwinoutputconfig.json`) as reference snapshots unless you explicitly want per-host declarative behavior. KWin scripts are included under `dotfiles/kde/kwin/`.
 
 ## Python workflow (recommended)
 

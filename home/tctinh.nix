@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   imports = [
@@ -7,8 +7,8 @@
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.
-  home.username = "tctinh";
-  home.homeDirectory = "/home/tctinh";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -21,4 +21,15 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    settings = {
+      user.name = username;
+      user.email = "tctinh@tma.com.vn";
+      init.defaultBranch = "main";
+      pull.rebase = false;
+      push.autoSetupRemote = true;
+    };
+  };
 }

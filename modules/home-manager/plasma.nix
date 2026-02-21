@@ -50,9 +50,9 @@
     #=========================================================================
     kwin = {
       virtualDesktops = {
-        number = 3;
+        number = 4;
         rows = 1;
-        names = [ "Desktop 1" "Desktop 2" "Desktop 3" ];
+        names = [ "Desktop 1" "Desktop 2" "Desktop 3" "Desktop 4" ];
       };
       borderlessMaximizedWindows = false;
       titlebarButtons = {
@@ -156,6 +156,26 @@
         "KZones: Switch to previous window in current zone" = "Ctrl+Alt+Down";
         "KZones: Toggle zone overlay" = "Ctrl+Alt+C";
 
+        # Krohnkite shortcuts
+        KrohnkiteFloatAll = "Meta+Shift+F";
+        KrohnkiteFocusDown = "Meta+J";
+        KrohnkiteFocusLeft = "Meta+H";
+        KrohnkiteFocusPrev = "Meta+\\";
+        KrohnkiteFocusUp = "Meta+K";
+        KrohnkiteGrowHeight = "Meta+Ctrl+J";
+        KrohnkiteIncrease = "Meta+I";
+        KrohnkiteMonocleLayout = "Meta+M";
+        KrohnkiteNextLayout = "Meta+\\\\";
+        KrohnkitePreviousLayout = "Meta+|";
+        KrohnkiteSetMaster = "Meta+Return";
+        KrohnkiteShiftDown = "Meta+Shift+J";
+        KrohnkiteShiftLeft = "Meta+Shift+H";
+        KrohnkiteShiftRight = "Meta+Shift+L";
+        KrohnkiteShiftUp = "Meta+Shift+K";
+        KrohnkiteShrinkHeight = "Meta+Ctrl+K";
+        KrohnkiteShrinkWidth = "Meta+Ctrl+H";
+        KrohnkitegrowWidth = "Meta+Ctrl+L";
+
         # Misc
         "Kill Window" = "Meta+Ctrl+Esc";
         "Activate Window Demanding Attention" = "Meta+Ctrl+A";
@@ -222,17 +242,22 @@
           Id_1 = "Desktop_1";
           Id_2 = "Desktop_2";
           Id_3 = "Desktop_3";
-          Number = 3;
+          Id_4 = "Desktop_4";
+          Name_1 = "Desktop 1";
+          Name_2 = "Desktop 2";
+          Name_3 = "Desktop 3";
+          Name_4 = "Desktop 4";
+          Number = 4;
           Rows = 1;
         };
 
         Plugins = {
           fadedesktopEnabled = false;
-          kzonesEnabled = true;
+          kzonesEnabled = false;
           rememberwindowpositionsEnabled = true;
           shakecursorEnabled = true;
           slideEnabled = false;
-          krohnkiteEnabled = false;
+          krohnkiteEnabled = true;
         };
 
         "Effect-overview" = {
@@ -283,6 +308,10 @@
           zoneSelectorTriggerDistance = 2;
         };
 
+        "Script-krohnkite" = {
+          screenGapTop = 18;
+        };
+
         "Script-rememberwindowpositions" = {
           moveActivity = true;
           moveVirtualDesktop = true;
@@ -324,20 +353,4 @@
     };
   };
 
-  #############################################################################
-  # Konsole Settings (outside programs.plasma)
-  #############################################################################
-  programs.konsole = {
-    enable = true;
-    defaultProfile = "zsh";
-    profiles.zsh = {
-      name = "zsh";
-      command = "zsh";
-      font = {
-        name = "JetBrainsMono Nerd Font";
-        size = 11;
-      };
-      colorScheme = "Breeze";
-    };
-  };
 }

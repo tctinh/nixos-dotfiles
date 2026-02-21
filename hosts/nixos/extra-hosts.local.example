@@ -1,0 +1,8 @@
+# Copy this file to `extra-hosts.local` for machine/work-specific host overrides.
+# This file is intentionally ignored by git.
+#
+# Format follows /etc/hosts:
+# <ip-address> <hostname1> <hostname2>
+#
+# Example:
+# 10.0.0.10 internal-api.example.com

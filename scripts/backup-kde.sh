@@ -3,7 +3,8 @@ set -euo pipefail
 
 # backup-kde.sh - Safe, curated KDE Plasma configuration backup script
 #
-# Purpose: Copy selected KDE config files from ~/.config to repo's dotfiles/kde
+# Purpose: Copy selected KDE config files from ~/.config and ~/.local/share
+#          to repo's dotfiles/kde
 # Safety: Explicit allowlist only, rejects secret-prone files, never modifies source
 # Role: Snapshot/reference only - does NOT conflict with plasma-manager
 
@@ -44,6 +45,7 @@ SECRET_PATTERNS=(
 # === Defaults ===
 DRY_RUN=false
 SOURCE_DIR="${HOME}/.config"
+SHARE_SOURCE_DIR="${HOME}/.local/share"
 TARGET_DIR="" # Will be computed from script location
 
 # === Functions ===
@@ -58,12 +60,13 @@ Copies curated allowlisted files from source to target directory.
 OPTIONS:
   --dry-run           Print actions without copying files
   --source <dir>      Source directory (default: \$HOME/.config)
-  --target <dir>      Target directory (default: repo dotfiles/kde)
+  --share-source <dir> Source local-share directory (default: \$HOME/.local/share)
+  --target <dir>       Target directory (default: repo dotfiles/kde)
   -h, --help          Show this help message
 
 EXAMPLES:
   $(basename "$0") --dry-run
-  $(basename "$0") --source "\$HOME/.config" --target "/tmp/kde-backup-test"
+  $(basename "$0") --source "\$HOME/.config" --share-source "\$HOME/.local/share"
 
 SAFETY:
   - Only copies explicitly allowlisted files
@@ -110,6 +113,10 @@ while [[ $# -gt 0 ]]; do
 		SOURCE_DIR="$2"
 		shift 2
 		;;
+	--share-source)
+		SHARE_SOURCE_DIR="$2"
+		shift 2
+		;;
 	--target)
 		TARGET_DIR="$2"
 		shift 2
@@ -139,6 +146,12 @@ if [[ ! -d "$SOURCE_DIR" ]]; then
 	exit 1
 fi
 
+# Verify local-share source exists
+if [[ ! -d "$SHARE_SOURCE_DIR" ]]; then
+	echo "Error: Share source directory does not exist: $SHARE_SOURCE_DIR" >&2
+	exit 1
+fi
+
 # Ensure target directory exists (unless dry-run)
 if [[ "$DRY_RUN" == false ]]; then
 	if [[ ! -d "$TARGET_DIR" ]]; then
@@ -149,6 +162,7 @@ fi
 echo "KDE Plasma Backup Script"
 echo "========================"
 echo "Source: $SOURCE_DIR"
+echo "Share Source: $SHARE_SOURCE_DIR"
 echo "Target: $TARGET_DIR"
 echo "Mode: $([ "$DRY_RUN" == true ] && echo "DRY-RUN" || echo "LIVE")"
 echo ""
@@ -186,6 +200,52 @@ for file in "${ALLOWLIST[@]}"; do
 		files_copied=$((files_copied + 1))
 	fi
 done
+
+# Backup KWin script marketplace registry
+registry_source="$SHARE_SOURCE_DIR/knewstuff3/kwinscripts.knsregistry"
+registry_target="$TARGET_DIR/kwin/kwinscripts.knsregistry"
+
+if [[ -f "$registry_source" ]]; then
+	if [[ "$DRY_RUN" == true ]]; then
+		echo "[COPY] kwin/kwinscripts.knsregistry"
+		files_copied=$((files_copied + 1))
+	else
+		mkdir -p "$TARGET_DIR/kwin"
+		cp "$registry_source" "$registry_target"
+		echo "[COPY] kwin/kwinscripts.knsregistry"
+		files_copied=$((files_copied + 1))
+	fi
+else
+	echo "[SKIP] kwin/kwinscripts.knsregistry (not found in share source)"
+	files_skipped=$((files_skipped + 1))
+fi
+
+# Backup all installed KWin scripts from ~/.local/share/kwin/scripts
+kwin_scripts_source_root="$SHARE_SOURCE_DIR/kwin/scripts"
+kwin_scripts_target_root="$TARGET_DIR/kwin/scripts"
+
+if [[ -d "$kwin_scripts_source_root" ]]; then
+	for script_dir in "$kwin_scripts_source_root"/*; do
+		if [[ ! -d "$script_dir" ]]; then
+			continue
+		fi
+
+		script_name=$(basename "$script_dir")
+
+		if [[ "$DRY_RUN" == true ]]; then
+			echo "[COPY] kwin/scripts/$script_name/"
+			files_copied=$((files_copied + 1))
+		else
+			mkdir -p "$kwin_scripts_target_root"
+			cp -a "$script_dir" "$kwin_scripts_target_root/"
+			echo "[COPY] kwin/scripts/$script_name/"
+			files_copied=$((files_copied + 1))
+		fi
+	done
+else
+	echo "[SKIP] kwin/scripts/ (directory not found in share source)"
+	files_skipped=$((files_skipped + 1))
+fi
 
 echo ""
 echo "Summary:"
