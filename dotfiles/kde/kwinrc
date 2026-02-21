@@ -5,11 +5,11 @@ AllowTearing=false
 Id_1=Desktop_1
 Id_2=Desktop_2
 Id_3=Desktop_3
-Id_4=d68b88ba-4847-47ab-823c-31673974088c
+Id_4=Desktop_4
 Name_1=Desktop 1
 Name_2=Desktop 2
 Name_3=Desktop 3
-Name_4=New Desktop
+Name_4=Desktop 4
 Number=4
 Rows=1
 
@@ -24,15 +24,23 @@ MoveResize=93
 
 [Plugins]
 fadedesktopEnabled=false
+karouselEnabled=false
 krohnkiteEnabled=true
 kzonesEnabled=false
 rememberwindowpositionsEnabled=true
 shakecursorEnabled=true
 slideEnabled=false
 synchronizeskipswitcherEnabled=false
+virtualdesktopsonlyonprimaryEnabled=true
 
 [Script-desktopchangeosd]
 PopupHideDelay=200
+
+[Script-karousel]
+gapsOuterBottom=10
+gapsOuterLeft=10
+gapsOuterRight=10
+gapsOuterTop=20
 
 [Script-krohnkite]
 directionalKeyDwm=true
@@ -40,12 +48,14 @@ directionalKeyFocus=false
 floatSkipPagerWindows=true
 ignoreClass=krunner,yakuake,spectacle,kded5,xwaylandvideobridge,plasmashell,ksplashqml,org.kde.plasmashell,org.kde.polkit-kde-authentication-agent-1,org.kde.kruler,kruler,kwin_wayland,ksmserver-logout-greeter,Waydroid,waydroid.com.netease.g108na
 ignoreTitle=waydroid
-noTileBorder=true
+preventMinimize=true
 screenGapBetween=10
 screenGapBottom=10
 screenGapLeft=10
 screenGapRight=10
-screenGapTop=18
+screenGapTop=20
+threeColumnLayoutOrder=0
+tileLayoutInitialRotationAngle=1
 
 [Script-kzones]
 layoutsJson=[\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 50 },\n            { "x": 50, "y": 0, "height": 100, "width": 50 }\n        ]\n    },\n    {\n        "name": "Priority Grid",\n        "padding": 0,\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 25 },\n            { "x": 25, "y": 0, "height": 100, "width": 50 },\n            { "x": 75, "y": 0, "height": 100, "width": 25 }\n        ]\n    },\n    {\n        "name": "DWM",\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 75 },\n            { "x": 75, "y": 50, "height": 50, "width": 25 },\n            { "x": 75, "y": 0, "height": 50, "width": 25 }\n        ]\n    },\n    {\n        "name": "Full",\n        "zones": [\n            { "x": 0, "y": 0, "height": 100, "width": 100 }\n        ]\n    }\n]
@@ -61,9 +71,6 @@ restoreResizedQuickTile=true
 
 [TabBox]
 LayoutName=thumbnail_grid
-
-[Tiling]
-padding=4
 
 [Tiling][02276c9a-d534-406f-ad0d-2f7a2e19f5c9][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -129,9 +136,11 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][7e512389-0153-4957-96ff-a14c9e37cab3]
@@ -144,6 +153,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_1][d97df37a-85d9-4c78-b308-a2551b361d4a]
@@ -156,9 +166,11 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][7e512389-0153-4957-96ff-a14c9e37cab3]
@@ -171,6 +183,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_2][d97df37a-85d9-4c78-b308-a2551b361d4a]
@@ -183,9 +196,11 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_3][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_3][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_3][7e512389-0153-4957-96ff-a14c9e37cab3]
@@ -198,9 +213,22 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_3][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][Desktop_3][d97df37a-85d9-4c78-b308-a2551b361d4a]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_4][315ca0aa-a6b2-4d08-9987-2a16d362381c]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_4][65c9e87a-b82f-48ec-bd43-1e9e315abeb7]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][Desktop_4][a147dd22-0c9a-47dc-b3bf-f4898d2f80b4]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][a3544e08-6c98-5875-8f11-1db6ff42c10e]
@@ -261,3 +289,5 @@ BorderSize=Tiny
 BorderSizeAuto=false
 ButtonsOnLeft=S
 ButtonsOnRight=IAX
+library=org.kde.breeze
+theme=Breeze

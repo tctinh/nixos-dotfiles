@@ -1,10 +1,3 @@
-[PlasmaViews][Panel 113]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 113][Defaults]
-thickness=34
-
 [PlasmaViews][Panel 114]
 floating=1
 floatingApplets=1
@@ -32,71 +25,6 @@ thickness=36
 maxLength=2401
 minLength=2401
 
-[PlasmaViews][Panel 142]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 142][Defaults]
-thickness=42
-
-[PlasmaViews][Panel 171]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 171][Defaults]
-thickness=38
-
-[PlasmaViews][Panel 182]
-floating=1
-
-[PlasmaViews][Panel 182][Defaults]
-thickness=32
-
-[PlasmaViews][Panel 209]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 209][Defaults]
-thickness=42
-
-[PlasmaViews][Panel 238]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 238][Defaults]
-thickness=42
-
-[PlasmaViews][Panel 30]
-floating=1
-
-[PlasmaViews][Panel 30][Defaults]
-thickness=25
-
-[PlasmaViews][Panel 32]
-floating=1
-
-[PlasmaViews][Panel 32][Defaults]
-maxLength=2401
-minLength=2401
-thickness=36
-
-[PlasmaViews][Panel 32][Horizontal2438]
-maxLength=2401
-minLength=2401
-
-[PlasmaViews][Panel 4]
-floating=1
-
-[PlasmaViews][Panel 4][Defaults]
-thickness=44
-
-[PlasmaViews][Panel 57]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 57][Defaults]
-thickness=44
-
 [PlasmaViews][Panel 60]
 floating=1
 
@@ -106,19 +34,6 @@ minLength=2401
 thickness=36
 
 [PlasmaViews][Panel 60][Horizontal2438]
-maxLength=2401
-minLength=2401
-
-[PlasmaViews][Panel 87]
-floating=1
-panelOpacity=2
-
-[PlasmaViews][Panel 87][Defaults]
-maxLength=2401
-minLength=2401
-thickness=36
-
-[PlasmaViews][Panel 87][Horizontal2438]
 maxLength=2401
 minLength=2401
 

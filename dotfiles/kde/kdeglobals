@@ -120,6 +120,8 @@ Theme=Papirus-Dark
 
 [KDE]
 LookAndFeelPackage=Nordic-bluish
+contrast=4
+frameContrast=0.2
 widgetStyle=Breeze
 
 [KFileDialog Settings]

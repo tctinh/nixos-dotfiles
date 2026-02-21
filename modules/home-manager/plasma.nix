@@ -309,7 +309,7 @@
         };
 
         "Script-krohnkite" = {
-          screenGapTop = 18;
+          screenGapTop = 20;
         };
 
         "Script-rememberwindowpositions" = {

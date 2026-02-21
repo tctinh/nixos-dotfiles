@@ -25,6 +25,7 @@ DialogWidth=810
 [Containments][114][Applets][116][Configuration][General]
 currentDesktopSelected=ShowDesktop
 displayedText=Number
+showOnlyCurrentScreen=true
 showWindowIcons=true
 
 [Containments][114][Applets][117]
@@ -38,8 +39,8 @@ immutability=1
 lastScreen=-1
 location=0
 plugin=org.kde.plasma.systemtray
-popupHeight=448
-popupWidth=448
+popupHeight=432
+popupWidth=432
 wallpaperplugin=org.kde.image
 
 [Containments][114][Applets][118][Applets][119]
@@ -49,9 +50,6 @@ plugin=org.kde.plasma.cameraindicator
 [Containments][114][Applets][118][Applets][120]
 immutability=1
 plugin=org.kde.plasma.clipboard
-
-[Containments][114][Applets][118][Applets][120][Configuration]
-PreloadWeight=55
 
 [Containments][114][Applets][118][Applets][121]
 immutability=1
@@ -65,15 +63,9 @@ plugin=org.kde.plasma.keyboardlayout
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
-[Containments][114][Applets][118][Applets][123][Configuration]
-PreloadWeight=100
-
 [Containments][114][Applets][118][Applets][124]
 immutability=1
 plugin=org.kde.plasma.notifications
-
-[Containments][114][Applets][118][Applets][124][Configuration]
-PreloadWeight=60
 
 [Containments][114][Applets][118][Applets][125]
 immutability=1
@@ -86,9 +78,6 @@ plugin=org.kde.plasma.keyboardindicator
 [Containments][114][Applets][118][Applets][127]
 immutability=1
 plugin=org.kde.plasma.weather
-
-[Containments][114][Applets][118][Applets][127][Configuration]
-PreloadWeight=55
 
 [Containments][114][Applets][118][Applets][127][Configuration][ConfigDialog]
 DialogHeight=630
@@ -103,9 +92,6 @@ provider=bbcukmet
 immutability=1
 plugin=org.kde.plasma.volume
 
-[Containments][114][Applets][118][Applets][128][Configuration]
-PreloadWeight=95
-
 [Containments][114][Applets][118][Applets][128][Configuration][General]
 migrated=true
 
@@ -117,9 +103,6 @@ plugin=org.kde.plasma.printmanager
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
-[Containments][114][Applets][118][Applets][130][Configuration]
-PreloadWeight=100
-
 [Containments][114][Applets][118][Applets][131]
 immutability=1
 plugin=org.kde.plasma.brightness
@@ -128,22 +111,13 @@ plugin=org.kde.plasma.brightness
 immutability=1
 plugin=org.kde.plasma.battery
 
-[Containments][114][Applets][118][Applets][132][Configuration]
-PreloadWeight=100
-
 [Containments][114][Applets][118][Applets][133]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
-[Containments][114][Applets][118][Applets][133][Configuration]
-PreloadWeight=12
-
 [Containments][114][Applets][118][Applets][167]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
-
-[Containments][114][Applets][118][Applets][167][Configuration]
-PreloadWeight=0
 
 [Containments][114][Applets][118][Applets][55]
 immutability=1
@@ -166,7 +140,6 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][114][Applets][134][Configuration]
-PreloadWeight=100
 popupHeight=467
 popupWidth=826
 
@@ -198,7 +171,6 @@ immutability=1
 plugin=org.kde.olib.thermalmonitor
 
 [Containments][114][Applets][138][Configuration]
-PreloadWeight=85
 popupHeight=359
 popupWidth=541
 
@@ -232,7 +204,6 @@ immutability=1
 plugin=plasmusic-toolbar
 
 [Containments][114][Applets][171][Configuration]
-PreloadWeight=70
 popupHeight=475
 popupWidth=320
 
@@ -257,9 +228,6 @@ useAlbumCoverAsPanelIcon=true
 [Containments][114][Applets][172]
 immutability=1
 plugin=AndromedaLauncher
-
-[Containments][114][Applets][172][Configuration]
-PreloadWeight=100
 
 [Containments][114][Applets][172][Configuration][ConfigDialog]
 DialogHeight=630
@@ -298,14 +266,13 @@ configurationOverrides={"overrides":{},"associations":[]}
 globalSettings={"panel":{"normal":{"enabled":false,"blurBehind":false,"backgroundColor":{"enabled":true,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"padding":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"flattenOnDeFloat":false,"backgroundClipping":false,"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}}},"busy":{"enabled":false,"blurBehind":false,"flattenOnDeFloat":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"padding":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}}},"hovered":{"enabled":false,"blurBehind":false,"flattenOnDeFloat":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"padding":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}}},"needsAttention":{"enabled":false,"blurBehind":false,"flattenOnDeFloat":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"padding":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}}},"expanded":{"enabled":false,"blurBehind":false,"flattenOnDeFloat":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"padding":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}}}},"widgets":{"normal":{"enabled":true,"blurBehind":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"spacing":4,"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"backgroundClipping":false,"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"opacity":1,"fontConfig":{"enabled":false,"font":{"familyOverride":false,"family":"","weightOverride":false,"weight":400,"italicOverride":false,"italic":true,"underlineOverride":false,"underline":true,"pointSizeOverride":false,"pointSize":10}}},"busy":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"spacing":4,"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1,"fontConfig":{"enabled":false,"font":{"familyOverride":false,"family":"","weightOverride":false,"weight":400,"italicOverride":false,"italic":true,"underlineOverride":false,"underline":true,"pointSizeOverride":false,"pointSize":10}}},"hovered":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"spacing":4,"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1,"fontConfig":{"enabled":false,"font":{"familyOverride":false,"family":"","weightOverride":false,"weight":400,"italicOverride":false,"italic":true,"underlineOverride":false,"underline":true,"pointSizeOverride":false,"pointSize":10}}},"needsAttention":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"spacing":4,"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1,"fontConfig":{"enabled":false,"font":{"familyOverride":false,"family":"","weightOverride":false,"weight":400,"italicOverride":false,"italic":true,"underlineOverride":false,"underline":true,"pointSizeOverride":false,"pointSize":10}}},"expanded":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"spacing":4,"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1,"fontConfig":{"enabled":false,"font":{"familyOverride":false,"family":"","weightOverride":false,"weight":400,"italicOverride":false,"italic":true,"underlineOverride":false,"underline":true,"pointSizeOverride":false,"pointSize":10}}}},"trayWidgets":{"normal":{"enabled":false,"blurBehind":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"backgroundClipping":false,"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"opacity":1},"busy":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1},"hovered":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1},"needsAttention":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1},"expanded":{"enabled":false,"blurBehind":false,"backgroundClipping":false,"backgroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"gradient":{"stops":[{"color":"#ff0000","position":0},{"color":"#f9f54e","position":0.25},{"color":"#21fd00","position":0.5},{"color":"#0e1eff","position":0.75},{"color":"#fd12ff","position":1}],"orientation":0},"image":{"source":"","fillMode":2}},"foregroundColor":{"enabled":false,"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#fc0000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"border":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"borderSecondary":{"enabled":false,"customSides":false,"custom":{"widths":{"left":0,"bottom":3,"right":0,"top":0},"margin":{"enabled":false,"side":{"right":0,"left":0,"top":0,"bottom":0}},"radius":{"enabled":false,"corner":{"topLeft":5,"topRight":5,"bottomRight":5,"bottomLeft":5}}},"width":0,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"View","custom":"#ff6c06","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true}},"shadow":{"background":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0},"foreground":{"enabled":false,"color":{"lightnessValue":0.5,"saturationValue":0.5,"alpha":1,"systemColor":"backgroundColor","systemColorSet":"View","custom":"#000000","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"animation":{"enabled":false,"interval":3000,"smoothing":800},"sourceType":1,"enabled":true},"size":5,"xOffset":0,"yOffset":0}},"opacity":1},"wideTrayArrow":false},"stockPanelSettings":{"position":{"enabled":false,"value":"top"},"alignment":{"enabled":false,"value":"center"},"lengthMode":{"enabled":false,"value":"fill"},"visibility":{"enabled":false,"value":"none"},"opacity":{"enabled":false,"value":"adaptive"},"floating":{"enabled":false,"value":false},"thickness":{"enabled":false,"value":48},"visible":{"enabled":false,"value":true},"screen":{"enabled":false,"value":0}},"configurationOverrides":{"overrides":{},"associations":[]},"unifiedBackground":[],"nativePanel":{"background":{"enabled":true,"opacity":1,"shadow":true},"floatingDialogs":false,"floatingDialogsAllowOverride":false,"fillAreaOnDeFloat":true}}
 hideWidget=true
 lastPreset=/home/tctinh/.local/share/plasma/plasmoids/luisbocanegra.panel.colorizer/contents/ui/presets/Default
-panelWidgets=[{"id":172,"name":"AndromedaLauncher","title":"Andromeda Launcher","icon":"nix-snowflake-white","inTray":false},{"id":174,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":116,"name":"org.kde.plasma.pager","title":"Pager","icon":"user-desktop","inTray":false},{"id":177,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":171,"name":"plasmusic-toolbar","title":"PlasMusic Toolbar","icon":"view-media-track","inTray":false},{"id":135,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":170,"name":"org.kde.plasma.icontasks","title":"Icons-Only Task Manager","icon":"preferences-system-windows","inTray":false},{"id":136,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":138,"name":"org.kde.olib.thermalmonitor","title":"Thermal Monitor","icon":"temperature-warm","inTray":false},{"id":117,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":118,"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"id":134,"name":"org.kde.plasma.digitalclock","title":"Digital Clock","icon":"preferences-system-time","inTray":false},{"id":187,"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-inactive-symbolic","inTray":false},{"id":184,"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"id":-1,"name":"chrome_status_icon_1","title":"Discord","icon":"","inTray":true},{"id":-1,"name":"Fcitx","title":"Input Method","icon":"input-keyboard-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.volume","title":"Audio Volume","icon":"audio-volume-high-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wireless-80-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
+panelWidgets=[{"id":172,"name":"AndromedaLauncher","title":"Andromeda Launcher","icon":"nix-snowflake-white","inTray":false},{"id":174,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":116,"name":"org.kde.plasma.pager","title":"Pager","icon":"user-desktop","inTray":false},{"id":177,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":171,"name":"plasmusic-toolbar","title":"PlasMusic Toolbar","icon":"view-media-track","inTray":false},{"id":135,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":170,"name":"org.kde.plasma.icontasks","title":"Icons-Only Task Manager","icon":"preferences-system-windows","inTray":false},{"id":136,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":138,"name":"org.kde.olib.thermalmonitor","title":"Thermal Monitor","icon":"temperature-warm","inTray":false},{"id":117,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":118,"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"id":134,"name":"org.kde.plasma.digitalclock","title":"Digital Clock","icon":"preferences-system-time","inTray":false},{"id":187,"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-active-symbolic","inTray":false},{"id":184,"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"id":-1,"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-active-symbolic","inTray":true},{"id":-1,"name":"chrome_status_icon_1","title":"Discord","icon":"","inTray":true},{"id":-1,"name":"Fcitx","title":"Input Method","icon":"input-keyboard-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.volume","title":"Audio Volume","icon":"audio-volume-high-symbolic","inTray":true},{"id":-1,"name":"plasmashell_microphone","title":"Microphone","icon":"microphone-sensitivity-high-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wired-activated-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
 
 [Containments][114][Applets][187]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][114][Applets][187][Configuration]
-PreloadWeight=60
 popupHeight=433
 popupWidth=324
 
@@ -326,27 +293,17 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][140][Applets][141][Configuration]
-PreloadWeight=100
-popupHeight=522
+popupHeight=506
 popupWidth=645
 
-[Containments][140][Applets][141][Configuration][General]
-favoritesPortedToKAstats=true
-
-[Containments][140][Applets][142]
-immutability=1
-plugin=org.kde.plasma.pager
-
-[Containments][140][Applets][142][Configuration][ConfigDialog]
+[Containments][140][Applets][141][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][140][Applets][142][Configuration][General]
-currentDesktopSelected=ShowDesktop
-displayedText=Number
-showOnlyCurrentScreen=true
-showWindowIcons=true
-wrapPage=true
+[Containments][140][Applets][141][Configuration][General]
+favoritesPortedToKAstats=true
+icon=distributor-logo-nixos
+systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][140][Applets][143]
 immutability=1
@@ -371,9 +328,6 @@ plugin=org.kde.plasma.cameraindicator
 immutability=1
 plugin=org.kde.plasma.clipboard
 
-[Containments][140][Applets][144][Applets][146][Configuration]
-PreloadWeight=55
-
 [Containments][140][Applets][144][Applets][147]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
@@ -385,9 +339,6 @@ plugin=org.kde.plasma.keyboardlayout
 [Containments][140][Applets][144][Applets][149]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
-
-[Containments][140][Applets][144][Applets][149][Configuration]
-PreloadWeight=100
 
 [Containments][140][Applets][144][Applets][150]
 immutability=1
@@ -409,9 +360,6 @@ plugin=org.kde.plasma.weather
 immutability=1
 plugin=org.kde.plasma.volume
 
-[Containments][140][Applets][144][Applets][154][Configuration]
-PreloadWeight=60
-
 [Containments][140][Applets][144][Applets][154][Configuration][General]
 migrated=true
 
@@ -422,9 +370,6 @@ plugin=org.kde.plasma.printmanager
 [Containments][140][Applets][144][Applets][156]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
-
-[Containments][140][Applets][144][Applets][156][Configuration]
-PreloadWeight=55
 
 [Containments][140][Applets][144][Applets][157]
 immutability=1
@@ -438,15 +383,9 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
-[Containments][140][Applets][144][Applets][159][Configuration]
-PreloadWeight=42
-
 [Containments][140][Applets][144][Applets][166]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
-
-[Containments][140][Applets][144][Applets][166][Configuration]
-PreloadWeight=18
 
 [Containments][140][Applets][144][Applets][55]
 immutability=1
@@ -470,9 +409,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][140][Applets][160][Configuration]
-PreloadWeight=55
 popupHeight=451
-popupWidth=525
+popupWidth=509
 
 [Containments][140][Applets][161]
 immutability=1
@@ -500,7 +438,7 @@ immutability=1
 plugin=org.kde.olib.thermalmonitor
 
 [Containments][140][Applets][164][Configuration]
-popupHeight=375
+popupHeight=361
 popupWidth=525
 
 [Containments][140][Applets][164][Configuration][ConfigDialog]
@@ -511,7 +449,7 @@ DialogWidth=811
 sensors=[{"name":"CPU","sensorId":"cpu/all/maximumTemperature"},{"name":"iGPU","sensorId":"gpu/gpu2/temperature"},{"name":"dGPU","sensorId":"gpu/gpu1/temperature"}]
 
 [Containments][140][General]
-AppletOrder=141;142;161;163;162;164;143;144;160
+AppletOrder=141;161;163;162;164;143;144;160
 
 [Containments][27]
 ItemGeometries-1516x947=
@@ -555,7 +493,7 @@ DialogHeight=630
 DialogWidth=811
 
 [Containments][28][Wallpaper][org.kde.image][General]
-Image=file:///home/tctinh/Pictures/wallpapers/nordic-wallpaper.jpg
+Image=file:///home/tctinh/.local/share/wallpapers/pexels-sam-kolder/
 SlidePaths=/home/tctinh/.local/share/wallpapers/,/nix/store/1a1vfg2cdybadpkk8mpqnw4rsx6wj26b-breeze-6.5.4/share/wallpapers/,/run/current-system/sw/share/wallpapers/
 
 [Containments][29]
@@ -588,41 +526,22 @@ location=3
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
 
-[Containments][60][Applets][169]
-immutability=1
-plugin=com.opencodebar.plasma
-
-[Containments][60][Applets][169][Configuration]
-PreloadWeight=60
-popupHeight=433
-popupWidth=432
-
 [Containments][60][Applets][61]
 immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][60][Applets][61][Configuration]
-PreloadWeight=100
-popupHeight=522
+popupHeight=506
 popupWidth=645
 
-[Containments][60][Applets][61][Configuration][General]
-favoritesPortedToKAstats=true
-
-[Containments][60][Applets][62]
-immutability=1
-plugin=org.kde.plasma.pager
-
-[Containments][60][Applets][62][Configuration][ConfigDialog]
+[Containments][60][Applets][61][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][60][Applets][62][Configuration][General]
-currentDesktopSelected=ShowDesktop
-displayedText=Number
-showOnlyCurrentScreen=true
-showWindowIcons=true
-wrapPage=true
+[Containments][60][Applets][61][Configuration][General]
+favoritesPortedToKAstats=true
+icon=nix-snowflake
+systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][60][Applets][63]
 immutability=1
@@ -643,9 +562,6 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
-[Containments][60][Applets][64][Applets][168][Configuration]
-PreloadWeight=47
-
 [Containments][60][Applets][64][Applets][55]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
@@ -661,9 +577,6 @@ plugin=org.kde.plasma.cameraindicator
 immutability=1
 plugin=org.kde.plasma.clipboard
 
-[Containments][60][Applets][64][Applets][66][Configuration]
-PreloadWeight=55
-
 [Containments][60][Applets][64][Applets][67]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
@@ -675,9 +588,6 @@ plugin=org.kde.plasma.keyboardlayout
 [Containments][60][Applets][64][Applets][69]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
-
-[Containments][60][Applets][64][Applets][69][Configuration]
-PreloadWeight=100
 
 [Containments][60][Applets][64][Applets][70]
 immutability=1
@@ -710,9 +620,6 @@ plugin=org.kde.plasma.printmanager
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
-[Containments][60][Applets][64][Applets][76][Configuration]
-PreloadWeight=60
-
 [Containments][60][Applets][64][Applets][77]
 immutability=1
 plugin=org.kde.plasma.brightness
@@ -721,15 +628,9 @@ plugin=org.kde.plasma.brightness
 immutability=1
 plugin=org.kde.plasma.battery
 
-[Containments][60][Applets][64][Applets][78][Configuration]
-PreloadWeight=60
-
 [Containments][60][Applets][64][Applets][79]
 immutability=1
 plugin=org.kde.plasma.bluetooth
-
-[Containments][60][Applets][64][Applets][79][Configuration]
-PreloadWeight=42
 
 [Containments][60][Applets][64][ConfigDialog]
 DialogHeight=630
@@ -747,9 +648,8 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][60][Applets][80][Configuration]
-PreloadWeight=55
 popupHeight=451
-popupWidth=525
+popupWidth=509
 
 [Containments][60][Applets][82]
 immutability=1
@@ -777,7 +677,6 @@ immutability=1
 plugin=org.kde.olib.thermalmonitor
 
 [Containments][60][Applets][85][Configuration]
-PreloadWeight=55
 popupHeight=361
 popupWidth=525
 
@@ -789,7 +688,7 @@ DialogWidth=810
 sensors=[{"name":"CPU","sensorId":"cpu/all/maximumTemperature"},{"name":"iGPU","sensorId":"gpu/gpu2/temperature"},{"name":"dGPU","sensorId":"gpu/gpu1/temperature"}]
 
 [Containments][60][General]
-AppletOrder=61;62;169;82;84;83;85;63;64;80
+AppletOrder=61;82;84;83;85;63;64;80
 
 [ScreenMapping]
 itemsOnDisabledScreens=

@@ -14,7 +14,7 @@
     # System behavior and tooling
     ./packages.nix
     ./power.nix
-    ./security.nix
+    # ./security.nix
     ./shell.nix
     ./virtualization.nix
   ];
